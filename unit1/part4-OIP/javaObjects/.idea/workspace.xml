@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="23ba8333-c340-487a-9c85-67a95936fa5b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../part1/javaArrays/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaArrays/.idea/javaArrays.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaArrays/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaArrays/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaArrays/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaArrays/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaArrays/IntroToArrays.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaArrays/Looping2DArrays.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaArrays/LoopingArrays.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaArrays/TwoDArrays.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaArrays/UpdateArrays.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaArrays/out/production/javaArrays/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaArrays/out/production/javaArrays/.idea/javaArrays.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaArrays/out/production/javaArrays/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaArrays/out/production/javaArrays/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaArrays/out/production/javaArrays/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaArrays/out/production/javaArrays/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaArrays/out/production/javaArrays/IntroToArrays.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaArrays/out/production/javaArrays/Looping2DArrays.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaArrays/out/production/javaArrays/LoopingArrays.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaArrays/out/production/javaArrays/TwoDArrays.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaArrays/out/production/javaArrays/UpdateArrays.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaFunctions/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaFunctions/.idea/javaFunctions.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaFunctions/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaFunctions/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaFunctions/BuiltInFunctions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaFunctions/Chorus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaFunctions/DocComments.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaFunctions/Parameters.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaFunctions/ReturnValues.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaFunctions/Scope.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaFunctions/out/production/javaFunctions/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaFunctions/out/production/javaFunctions/.idea/javaFunctions.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaFunctions/out/production/javaFunctions/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaFunctions/out/production/javaFunctions/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaFunctions/out/production/javaFunctions/BuiltInFunctions.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaFunctions/out/production/javaFunctions/Chorus.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaFunctions/out/production/javaFunctions/DocComments.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaFunctions/out/production/javaFunctions/Parameters.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaFunctions/out/production/javaFunctions/ReturnValues.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaFunctions/out/production/javaFunctions/Scope.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaLoops/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaLoops/.idea/javaLoops.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaLoops/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaLoops/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaLoops/BreakAndContinue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaLoops/ForLoops.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaLoops/NestedLoops.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaLoops/WhileLoops.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaLoops/out/production/javaLoops/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaLoops/out/production/javaLoops/.idea/javaLoops.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaLoops/out/production/javaLoops/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaLoops/out/production/javaLoops/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaLoops/out/production/javaLoops/BreakAndContinue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaLoops/out/production/javaLoops/ForLoops.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaLoops/out/production/javaLoops/NestedLoops.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaLoops/out/production/javaLoops/WhileLoops.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaVariables/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaVariables/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaVariables/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaVariables/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaVariables/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaVariables/JavaWk1Mod1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaVariables/out/production/JavaWk1Mod1/Bus.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaVariables/out/production/JavaWk1Mod1/Decimals.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaVariables/out/production/JavaWk1Mod1/Form.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaVariables/out/production/JavaWk1Mod1/HelloWorld.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaVariables/out/production/JavaWk1Mod1/JoiningStrings.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaVariables/out/production/JavaWk1Mod1/MathOperations.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaVariables/out/production/JavaWk1Mod1/Survey.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaVariables/out/production/JavaWk1Mod1/TypeCasting.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaVariables/out/production/JavaWk1Mod1/Variables.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaVariables/out/production/JavaWk1Mod1/WholeNumbers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaVariables/src/Bus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaVariables/src/Decimals.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaVariables/src/Form.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaVariables/src/HelloWorld.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaVariables/src/JoiningStrings.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaVariables/src/MathOperations.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaVariables/src/Survey.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaVariables/src/TypeCasting.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaVariables/src/Variables.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part1/javaVariables/src/WholeNumbers.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2F2Z2Y3DC7d2lLgk666FrYcYB8D" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="23ba8333-c340-487a-9c85-67a95936fa5b" name="Changes" comment="" />
+      <created>1663691935540</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1663691935540</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
