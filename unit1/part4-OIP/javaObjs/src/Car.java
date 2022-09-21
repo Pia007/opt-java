@@ -158,7 +158,7 @@ public class Car {
     // ref trap - getter should not return an array field directly
     // should be a copy -- see spare parts getter
     // Update the copy constructor
-        // nissan2 uses the copy constructor to update its field so it does not the spare parts array
+        // nissan2 uses the copy constructor to update its field, so it does not the spare parts array
             // update it by setting it to a copy of the source array and its length - see copy constructor above
 
 //Update the setters

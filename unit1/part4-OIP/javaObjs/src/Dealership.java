@@ -1,6 +1,15 @@
+import java.util.Arrays;
+
 public class Dealership {
 
     private Car[] cars;  //create a field of cars
+
+    // dealership constructor
+    public Dealership() {
+        //set the field with size of 3
+        this.cars = new Car[3];
+
+    }
 
 }
 
