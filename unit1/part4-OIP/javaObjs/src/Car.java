@@ -19,9 +19,21 @@ public class Car {
 
     }
 
+    // add another constructor
+        // it expects to receive another Car - pass in Car source
+        // set the fields equal to that of the source
+        // go to Main and call the copy constructor
+    public Car(Car source) {
+        this.make = source.make;
+        this.price = source.price;
+        this.year = source.year;
+        this.color = source.color;
+    }
+
     // create a getter for each field
     public String getMake() {
         return this.make;
+        //call also use return make
     }
 
     public double getPrice() {
@@ -81,3 +93,15 @@ public class Car {
     // public, lowerCamelCase, receives a parameter
     // updates the field of the current object a parameter
     // every car obj can call them using dot syntax
+
+// Reference Trap - arrays and objects
+    // when may variables share a reference to one object
+        // state of a variable should not change bc another was updated
+        // avoid: do not set class variables equal to one another, create a new object
+// Copy constructor - copies every value from one object to another
+    // one parameter - the object to copy values from, the source
+        // public Car(Car source) {}
+    // constructor overload - having more than one constructor
+    // class can have many constructors - share same name, but can take diff parameters
+    // how does java know which one is called - java looks at the arguments you pass in
+    // CREATE A NEW OBJECT AND USE THE COPY CONSTRUCTOR TO COPY EVERY VALUE FROM A SOURCE

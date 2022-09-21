@@ -6,9 +6,13 @@ public class Main {
         Car nissan =  new Car("Nissan", 5000, 2020, "red");
         Car dodge = new Car("Dodge", 11000, 2019, "blue");
 
+        // use the copy constructor
+        Car nissan2 = new Car(nissan);
+
         // use a setter to update the color of each car
         nissan.setColor("green");
         dodge.setColor("white");
+        nissan2.setColor("yellow");
 
         // 50% off sell for every car
         nissan.setPrice(nissan.getPrice() / 2);
@@ -22,12 +26,10 @@ public class Main {
         // nissan.year = 2030;
         // nissan.color = "orange";
 
-        //instantiate a new car object
-
-
 
         System.out.println("This " + nissan.getColor() + " " + nissan.getYear() + " " + nissan.getMake() + " costs " + "$" + nissan.getPrice());
         System.out.println("This " + dodge.getColor() + " " + dodge.getYear() + " " + dodge.getMake() + " costs " + "$" + dodge.getPrice());
+        System.out.println("This " + nissan2.getColor() + " " + nissan2.getYear() + " " + nissan2.getMake() + " costs " + "$" + nissan2.getPrice());
 
 
     }
