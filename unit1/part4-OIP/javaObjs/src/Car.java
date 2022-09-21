@@ -12,8 +12,7 @@ public class Car {
     private String[] parts;
 
     // add a constructor that takes 4 parameters
-        // now in Main, the new instances of Car will have error bc it is expecting parameters
-            // update the constructor bc car class now has 5 fields
+
     public Car( String make, double price, int year, String color, String[] parts) {
         // set each field in the object equal to a parameter - this keyword (current object)
             // this distinguishes between fields and parameters
