@@ -27,10 +27,14 @@ public class Main {
         // nissan.color = "orange";
 
 
-        System.out.println("This " + nissan.getColor() + " " + nissan.getYear() + " " + nissan.getMake() + " costs " + "$" + nissan.getPrice());
-        System.out.println("This " + dodge.getColor() + " " + dodge.getYear() + " " + dodge.getMake() + " costs " + "$" + dodge.getPrice());
-        System.out.println("This " + nissan2.getColor() + " " + nissan2.getYear() + " " + nissan2.getMake() + " costs " + "$" + nissan2.getPrice());
+//        System.out.println("This " + nissan.getColor() + " " + nissan.getYear() + " " + nissan.getMake() + " costs " + "$" + nissan.getPrice());
+//        System.out.println("This " + dodge.getColor() + " " + dodge.getYear() + " " + dodge.getMake() + " costs " + "$" + dodge.getPrice());
+//        System.out.println("This " + nissan2.getColor() + " " + nissan2.getYear() + " " + nissan2.getMake() + " costs " + "$" + nissan2.getPrice());
 
+        // call the drive action from the nissan obj
+        nissan.drive();
+        dodge.drive();
+        nissan2.drive();
 
     }
 }

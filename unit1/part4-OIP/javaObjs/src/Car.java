@@ -64,6 +64,12 @@ public class Car {
     public void setColor(String color) {
         this.color = color;
     }
+
+    //add an action to the car class
+    public void drive() {
+        System.out.println("You brought the beautiful " + this.year + " " + this.color + " " + this.make + " for " + this.price + ".");
+        System.out.println("Please drive your car to the nearest exit.\n");
+    }
 }
 
 // class - blueprint for creating objects
@@ -105,3 +111,5 @@ public class Car {
     // class can have many constructors - share same name, but can take diff parameters
     // how does java know which one is called - java looks at the arguments you pass in
     // CREATE A NEW OBJECT AND USE THE COPY CONSTRUCTOR TO COPY EVERY VALUE FROM A SOURCE
+
+// Actions - methods that reps what the object can do
