@@ -3,20 +3,24 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
 
-        String[] parts = {"tire", "keys"};
+        // String[] parts = {"tire", "keys"}; same as new String[] {"tires", "keys"};
 
-        Car nissan =  new Car("Nissan", 5000, 2020, "red", parts);
-        Car dodge = new Car("Dodge", 11000, 2019, "blue", parts);
-        Car nissan2 = new Car(nissan);
-        nissan.setColor("green");
-        dodge.setColor("white");
-        nissan2.setColor("yellow");
+        // Define and array of cars, instead of having 3 separate car variable,
+        Car[] cars = new Car[] {
+                new Car("Nissan", 5000, 2020, "red", new String[] {"tires", "keys"}),
+                new Car("Dodge", 11000, 2019, "blue", new String[] {"tires", "keys"}),
+                new Car("Nissan", 5000, 2020, "yellow", new String[] {"tires", "filter"})
+        };
 
-        nissan2.setParts(new String[] {"tires", "filter"});  //return or change an array
-
-        // create an object of the dealership class
         Dealership dealership = new Dealership();
 
+        // update the dealership cars field by putting car objs in the array, replace make with index
+        // dealership.setCar(nissan, 0);
+        // instead of doing them individually, use a for loop
+
+        for (int i = 0; i < cars.length; i++) {
+            dealership.setCar(cars[i], i);
+        }
     }
 }
 
