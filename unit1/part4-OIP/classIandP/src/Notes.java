@@ -20,6 +20,25 @@ public class Notes {
             // *Main - compare obj using equals(), same result as ==
     // how to override equals() - see Person
 
+// hashCode() - equality contract, obj that are equal must always share the same hashCode
+    // comment out equals() override in Person.java
+    // *Main p1 and p2 have the same hashCode bc if inheritance
+    //* now make p2 a copy of p - not the same hashCode
+    // what happens when equals() is overridden but hashCode is not
+        // uncomment the equals() override
+        // set the objs directly equal to each other
+        // both p and p2 point to the same obj
+            // same hashCode and equality is true
+        // so the equality contract is not broken
+        // now set p2 to a new copy of the obj and run
+            // equality true but different hashCodes
+                // equals() compares the fields from each obj
+                // hashCode() assigns a ref to each obj for its lifetime
+            // equality contract is broken
+                // fix always override hashCode if you override equals()
+    // now override the hashCode() using the Objects.hash()
+        // assigns equal objs the same hashCode
+        // now equality is true and p and p2 have the same hashCode
 
 
 

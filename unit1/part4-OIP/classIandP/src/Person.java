@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Person {
     private String name;
     private int age;
@@ -39,10 +41,14 @@ public class Person {
             return false;
         }
 
-        // if it is typecast the obj to person
         Person person = (Person)obj;
-        // then compare the fields to the current obj that call this method to the one that's being passed in
         return this.age == person.getAge() && this.name.equals(person.getName());
+    }
 
+    @Override
+    public int hashCode() {
+        // needs to assign equal objs the same hashCode
+
+        return Objects.hash(this.age, this.name);
     }
 }
