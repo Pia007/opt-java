@@ -54,5 +54,20 @@ public class Notes {
             // Product product = new Product(4.99, "blue", "Java");  should not be allowed
         // make the Product class abstract
         // only purpose of the Product class is to provide inheritance for pants and shirt
+// hashCode() and equals() - adding both to child classes
+    // equal() - use the super() method when comparing parent class to the child class
+        // super() calls the getter in the parent class
+    // hashCode() - to generate a hash code
+        // pass in the unique param and the super params from the parent
+            // ex Shirt class  return Objects.hash(size, super.getPrice(), super.getColor(), super.getBrand());
+            // go to *Main and check if shirt and shirt2 are equal using the debugger
+                // based on the contents of the objects they are equal
+            // *Main print the hashCodes of ea shirt
+                // they are both the same
+
+//this.method vs super.method
+    // this can call local and inherited methods
+        // when calling an inherited method, safer to use super bc this will call the local method first
+    // super can only call inherited methods
 
 
