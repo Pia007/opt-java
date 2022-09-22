@@ -8,6 +8,7 @@ public class Shirt extends Product {
 
     //constructor
     public Shirt (String size, double price, String color, String brand) {
+        super(price, color, brand);
         this.size = size;
 
     }

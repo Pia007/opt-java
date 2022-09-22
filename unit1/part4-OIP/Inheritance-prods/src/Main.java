@@ -1,4 +1,5 @@
 import models.Pants;
+import models.Product;
 import models.Shirt;
 
 public class Main {
@@ -6,12 +7,11 @@ public class Main {
     static final String FILE_NAME = "products.txt";
 
     public static void main(String[] args) {
-        Shirt shirt = new Shirt("SMALL",5.99, "BLUE", "Java Vuitton" );
-        Pants pants = new Pants(32, 21.99, "black", "Java Klein");
 
-        System.out.println(shirt.toString());
-        System.out.println(pants.toString());
-
-
+        //both of type Product, can be store in an array of type Product that can store Product objects
+        Product[] products = new Product[] {
+            new Shirt("SMALL",5.99, "BLUE", "Java Vuitton" ),
+            new Pants(32, 21.99, "black", "Java Klein"),
+        };
     }
 }
