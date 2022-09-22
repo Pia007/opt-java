@@ -8,7 +8,6 @@ public class Dealership {
     public Dealership() {
         //set the field with size of 3
         this.cars = new Car[3];
-
     }
 
     // setter
@@ -38,10 +37,27 @@ public class Dealership {
             if (this.cars[i] == null) {
                 continue;
             } else if (this.cars[i].getMake().equals(make) &&  this.cars[i].getPrice() <= budget) {
-                return "\nWe found one in spot " + i + "\n" + this.cars[i].toString() + "\nAre you interested?";
+                return "\nWe found one in spot " + i + "\n" + this.cars[i].toString() + "\nAre you interested?" +"\n";
             }
         }
         return "Sorry we could not help you find a car.";
+    }
+
+    // add toString()
+    public String toString() {
+        String temp = "";
+
+        for (int i = 0; i < this.cars.length; i++) {
+            temp += "Parking Spot: " + i + "\n";
+
+            // if null, append empty
+            if (this.cars[i] == null) {
+                temp += "Empty\n";
+            } else {
+                temp += this.cars[i].toString() + "\n";
+            }
+        }
+        return temp;
     }
 
 }
@@ -98,3 +114,10 @@ public class Dealership {
     // now add the logic - for loop
     // NULLPOINTER EXCEPTION - trying to access or dot syntax something with a null will crash and throw an exception
         // one care is null - must write logic for it
+
+// add toString() to the dealership
+    // return a string rep of every car
+    // iterate over the cars array and
+        // append the parking spot of each car to the temp var
+        // append the description of each car obj
+    //*Main - test by printing the dealership obj
