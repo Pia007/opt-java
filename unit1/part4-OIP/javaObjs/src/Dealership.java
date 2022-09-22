@@ -31,6 +31,19 @@ public class Dealership {
         this.cars[index] = null;
     }
 
+    // search action
+    public String searchCar(String make, int budget) {
+        for (int i = 0; i < this.cars.length; i++) {
+
+            if (this.cars[i] == null) {
+                continue;
+            } else if (this.cars[i].getMake().equals(make) &&  this.cars[i].getPrice() <= budget) {
+                return "\nWe found one in spot " + i + "\n" + this.cars[i].toString() + "\nAre you interested?";
+            }
+        }
+        return "Sorry we could not help you find a car.";
+    }
+
 }
 
 // dealership class is a manager class
@@ -78,3 +91,10 @@ public class Dealership {
     // append the drive() to the care at that index
     // remove the car from inventory
     // *Main call sellCar from the dealership and pass in an index
+// search action
+    // will search through all cars and return on that fits the cx's liking
+        // 2 params ( make and budget)
+    // Main* test - have the dealership search for a dodge on an 8000 budget
+    // now add the logic - for loop
+    // NULLPOINTER EXCEPTION - trying to access or dot syntax something with a null will crash and throw an exception
+        // one care is null - must write logic for it

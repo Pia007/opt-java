@@ -24,6 +24,9 @@ public class Main {
 
         // sell a car
         dealership.sellCar(2);
+
+        // search for a car
+        System.out.println(dealership.searchCar("Dodge", 15000));
     }
 }
 
