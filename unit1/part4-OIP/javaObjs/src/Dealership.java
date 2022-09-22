@@ -5,9 +5,12 @@ public class Dealership {
     private Car[] cars;  //create a field of cars
 
     // dealership constructor
-    public Dealership() {
-        //set the field with size of 3
-        this.cars = new Car[3];
+    public Dealership(Car[] cars) {
+        this.cars = new Car[cars.length];
+        // update each element
+        for (int i = 0; i < cars.length; i++) {
+            this.cars[i] = new Car(cars[i]);
+        }
     }
 
     // setter
@@ -121,3 +124,28 @@ public class Dealership {
         // append the parking spot of each car to the temp var
         // append the description of each car obj
     //*Main - test by printing the dealership obj
+
+// fixing the constructor
+    // first then that runs when a new obj is created
+    // should update every field of a new obj
+    //*Main - remove
+           // for (int i = 0; i < cars.length; i++) {
+           //     dealership.setCar(cars[i], i);
+           // }
+        //Why? calling setter to update the cars field, should be done by constructor
+    // pass the array of car objs into the constructor - Car[] cars
+    // change the fixed length, 3, to reflect the same length of the parameter that gets passed in
+        // Car[cars.length] cars
+    //*Main - pass in one arg so that java will know which constructor to call
+        // car array
+    //*Main - add 2 more cars to the cars array and print dealership
+        // spots should be empty bc all elements have not been updated
+    // update every element with an object from the cars parameter
+        // in dealership constructor
+            // iterate over the cars array,
+                    // index every element in the cars field
+                    // avoid the ref trap by setting every elem in the cars field equal to a new car obj
+                        // with each new cars obj copying its values from its source, the obj being indexed from the cars parameter
+    // WHY NOT USE Arrays.copyOf
+        // shallow copies the ref on each element
+        // therefore elements from both arrs will share a ref to the same obj -- not good
