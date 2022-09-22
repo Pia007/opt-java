@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/classIandP.iml" filepath="$PROJECT_DIR$/classIandP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javaPolymorphism.iml" filepath="$PROJECT_DIR$/javaPolymorphism.iml" />
     </modules>
   </component>
 </project>
