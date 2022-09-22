@@ -47,6 +47,12 @@ public class Notes {
     // in order to print the objects field when printing the obj, must override the toString()
         // do this in Person
 
+// Polymorphism
+// many forms
+// obj can take many forms
+// inheritance allows an obj to be polymorphic
+// its own form or the form of the class it inherits
+
 
 
 
