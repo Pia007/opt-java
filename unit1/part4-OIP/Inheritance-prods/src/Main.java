@@ -16,10 +16,13 @@ public class Main {
         shirt.equals(shirt2);
         System.out.println(shirt.hashCode());
         System.out.println(shirt2.hashCode());
+<<<<<<< HEAD
 
         pants.equals(pants2);
         System.out.println(pants.hashCode());
         System.out.println(pants2.hashCode());
+=======
+>>>>>>> 617b675c572cf9250868cda92e4f0f7d5ab64c59
     }
 }
 
