@@ -21,7 +21,23 @@ public class Main {
         for (int i = 0; i < cars.length; i++) {
             dealership.setCar(cars[i], i);
         }
+
+        // get the car obj at [0]
+        Car newCar = dealership.getCar(0);
+        System.out.println("An outside variable is set to the car at index 0" + "\n" + newCar);
+
+        // update the new car's color field, this changes the outside variable
+        newCar.setColor("blue");
+        System.out.println("This changes the outside variable's car color to blue" + "\n" + newCar);
+
+        // access another copy of the car at index 0 and print it, the field is not changes
+        System.out.println("The protected field has not changed" + "\n" + dealership.getCar(0));
+
+        //the outside variable was changed but the obj[0] of the car field changed too
     }
 }
+
+
+
 
 

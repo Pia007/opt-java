@@ -16,6 +16,15 @@ public class Dealership {
         this.cars[index] = new Car(car);
     }
 
+    // getter
+    public Car getCar(int index) {
+        // same ref as the outside variable, will change the field, not good
+        //return this.cars[index];
+
+        // creating a new obj by copying the source does not change the field, good
+        return new Car(this.cars[index]);
+    }
+
 }
 
 // dealership class is a manager class
@@ -24,7 +33,7 @@ public class Dealership {
     // dealership class needs to model every field and every action
         // field will be an array of car objects
     // next go to main and create an object of the dealership
-// setter
+// setters
     // dealership has one field - req 1 setter
     // the field is an array of Cars
         // setCar is not a good idea - only want to be able to update one car
@@ -41,3 +50,20 @@ public class Dealership {
             // Java runs the copy constructor that receives one as a parameter
             // every field value from the source obj is copied into the car that was just created
     //*Main to update the cars array
+// getters
+    // must add bc the Cars field is private
+    // for the sake of memory - do not get all car obj at once
+    // dealership class manages an array of car objs
+    // return 1 obj, from an index of the users choice
+    //*Main get the car obj at index 0
+    //Ref Trap
+        // running the code shows that the field has change but its private
+        // Why?
+            // outside var and field  share a ref to the same obj
+            // getter should not return an obj
+    // Fix: return a new copy of the obj in Dealerships getter
+        // pass in the source to copy values from - this.cars[index]
+        // creates a new car obj by copying every field from the source obj into the new obj
+            // java knows to run the constructor that receives one as a parameter
+            // the getter returns a new copy, there is no way any of the obj in the cars field will be affected
+        // now running the code shows that the field is still protected
