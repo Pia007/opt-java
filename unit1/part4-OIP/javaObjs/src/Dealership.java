@@ -25,6 +25,12 @@ public class Dealership {
         return new Car(this.cars[index]);
     }
 
+    // sell action
+    public void sellCar(int index) {
+        this.cars[index].drive();
+        this.cars[index] = null;
+    }
+
 }
 
 // dealership class is a manager class
@@ -67,3 +73,8 @@ public class Dealership {
             // java knows to run the constructor that receives one as a parameter
             // the getter returns a new copy, there is no way any of the obj in the cars field will be affected
         // now running the code shows that the field is still protected
+// sell car action
+    // sellCar() - pass in which car index
+    // append the drive() to the care at that index
+    // remove the car from inventory
+    // *Main call sellCar from the dealership and pass in an index
