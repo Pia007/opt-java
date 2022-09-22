@@ -5,13 +5,16 @@ import models.Shirt;
 public class Main {
 
     static final String FILE_NAME = "products.txt";
-
     public static void main(String[] args) {
 
-        //both of type Product, can be store in an array of type Product that can store Product objects
-        Product[] products = new Product[] {
-            new Shirt("SMALL",5.99, "BLUE", "Java Vuitton" ),
-            new Pants(32, 21.99, "black", "Java Klein"),
-        };
+        Shirt shirt = new Shirt("SMALL",5.99, "blue", "Java Vuitton" );
+        Pants pants = new Pants(32, 21.99, "black", "Java Klein");
+        Shirt shirt2 = new Shirt(shirt);
+        Pants pants2 = new Pants(pants);
+
+        shirt.getColor();
+        pants.setPrice(59.99);
     }
 }
+
+

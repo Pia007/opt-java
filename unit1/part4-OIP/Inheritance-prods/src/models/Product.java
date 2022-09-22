@@ -12,4 +12,37 @@ public class Product {
         this.color = color;
         this.brand = brand;
     }
+
+    // copy constructor for the parent class
+    public Product (Product source) {
+        this.price = source.price;
+        this.color = source.color;
+        this.brand = source.brand;
+    }
+
+    //getters
+    public double getPrice() {
+        return price;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    // setters
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
 }

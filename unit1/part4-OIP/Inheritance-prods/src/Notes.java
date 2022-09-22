@@ -30,4 +30,16 @@ public class Notes {
 // polymorphism is useful bc of flexibility
     // *Main - shirt and pants are both of type Product, they can be stored in an array
 
+// super() copy Constructor
+    // child calls the parent copy constructor
+    // remove the array in Main
+    // create shirt2 in Main, then in Shirt, create a copy constructor in Shirt, then a copy constructor in Product
+    // create pants2 ''''''
 
+// Getters and Setters
+    // child class will inherit getters and setters its parent class
+    // Product - parent
+    // Shirt and Pants - children, have access to the product setters
+        // shirt - has getter and setter for size
+        // pants - had getter and setter for waist
+    //*Main shirt and pants can access inherited getters and setters
