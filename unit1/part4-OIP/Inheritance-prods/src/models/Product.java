@@ -1,6 +1,7 @@
 package models;
 
-public class Product {
+// make the product class abstract
+public abstract class Product {
     // define fields that are common to shirt and pants classes
     private double price;
     private String color;

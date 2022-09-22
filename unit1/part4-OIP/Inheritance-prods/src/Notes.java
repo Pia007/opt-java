@@ -43,3 +43,16 @@ public class Notes {
         // shirt - has getter and setter for size
         // pants - had getter and setter for waist
     //*Main shirt and pants can access inherited getters and setters
+
+// Abstract - a class can be abstract
+    // can create an object of a concrete class, Product
+    // CANNOT create an object of an abstract class
+    // make a class abstract if its only purpose is inheritance
+    // If you Label the parent class abstract, should not be able to create an object of the parent class
+    // requirements state that the store sells shirt and pants
+        // need to prevent and object of the Product class from being created because it would be ambiguous
+            // Product product = new Product(4.99, "blue", "Java");  should not be allowed
+        // make the Product class abstract
+        // only purpose of the Product class is to provide inheritance for pants and shirt
+
+
