@@ -12,8 +12,10 @@ public class Main {
         Shirt shirt2 = new Shirt(shirt);
         Pants pants2 = new Pants(pants);
 
-        shirt.getColor();
-        pants.setPrice(59.99);
+        // use debugger to check
+        shirt.equals(shirt2);
+        System.out.println(shirt.hashCode());
+        System.out.println(shirt2.hashCode());
     }
 }
 
