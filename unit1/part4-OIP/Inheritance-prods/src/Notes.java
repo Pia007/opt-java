@@ -158,5 +158,6 @@ public class Notes {
         // Make the Product class comparable in the with <Product>
             // next, override compareTo() - type cast the rounded difference between the current price and the specified objects price
             // now both Pants and shirts will inherit compareTo from Product
+        // *Main - remove all code and replace with sample-two.txt, RUN AND all products are sorted by price from low to high
 
 

@@ -7,7 +7,7 @@ public class Shirt extends Product {
 
     // enum
     public enum Size {
-        SM, MED, LG, XL, XXL
+        SMALL, MEDIUM, LARGE
     }
 
     // change String to Size enum

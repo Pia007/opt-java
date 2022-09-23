@@ -12,17 +12,21 @@ public class Main {
 
         Product[] products = new Product[] {
                 new Pants(32, 24.99, "Blue", "JAVA KLEIN"),
+                new Shirt(Shirt.Size.MEDIUM, 22.99, "Black", "CHANEL"),
                 new Pants(34, 104.99, "Red", "JANGLER"),
+                new Shirt(Shirt.Size.SMALL, 13.99, "Orange", "GEORGE"),
                 new Pants(30, 119.99, "Grey", "FENDI"),
+                new Shirt(Shirt.Size.LARGE, 34.99, "Blue", "ECKO"),
                 new Pants(30, 129.99, "Red", "VERSACE"),
+                new Shirt(Shirt.Size.SMALL, 22.99, "Beige", "ZARA"),
                 new Pants(29, 99.99, "Dark", "JANGLER"),
+                new Shirt(Shirt.Size.SMALL, 19.99, "Red", "NIKE"),
                 new Pants(26, 24.99, "Indigo", "BELSTAFF"),
+                new Shirt(Shirt.Size.LARGE, 29.99, "Blue", "ADIDAS"),
                 new Pants(34, 104.99, "Red", "JANGLER"),
         };
 
-        //sort the array - will call compareTo()
         Arrays.sort(products);
-
         printArray(products);
 
     }
