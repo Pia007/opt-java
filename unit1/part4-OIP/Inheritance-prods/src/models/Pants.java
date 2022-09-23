@@ -2,7 +2,8 @@ package models;
 
 import java.util.Objects;
 
-public class Pants extends Product {
+// implement the interface
+public class Pants extends Product implements Discountable {
 
     // fields
     private int waist;
@@ -26,6 +27,13 @@ public class Pants extends Product {
     //setters
     public void setWaist(int waist) {
         this.waist = waist;
+    }
+
+    // override discount() from the interface
+    @Override
+    public void discount() {
+        // offer a 50% discount
+        super.setPrice(super.getPrice() / 2);
     }
 
     // override fold()

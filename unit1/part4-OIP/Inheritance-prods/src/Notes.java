@@ -97,7 +97,27 @@ public class Notes {
         // must for every child to implement the fold method
         // *Product define a public abstract method that forces every child class to define a method that returns void when fold() is called
             // and it does not take any parameters
-        // abstract method does not have a body, is not concrete and can implemented in several ways
+        // abstract method does not have a body, is not concrete and can be implemented in several ways
         // each child class will have its own way of overriding it
             //Shirt and Pants class override it
         //*Main test
+
+//Interface - defines a method that a class needs to implement, contract
+    // if a class implements an interface it must override all methods inside the interface
+    // used to define behavior that is required from a class
+    // How? ex) public interface name {};
+        // method signatures are defined inside the interface
+            // public void method1();
+        // the class that implements it must override every method inside of it
+    // *Pants - pants are eligible for %50 discount
+        // force the pants class to implement this behavior
+        // How to Define and interface?
+            // in models create Discountable.java
+                // make it an interface
+                // force every class that implements it to override a public void method called discount
+            //*Pants - add that it implements the discountable interface
+                // and is agreeing to override the discount method
+                // override the discount()
+        // *Main - use debugger to test
+        // Interfaces allow polymorphism How?
+            // Pants are discountable, can declare the object as type discountable
