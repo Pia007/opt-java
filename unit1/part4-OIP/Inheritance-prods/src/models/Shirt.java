@@ -51,4 +51,15 @@ public class Shirt extends Product {
     public int hashCode() {
         return Objects.hash(size, super.getPrice(), super.getColor(), super.getBrand());
     }
+
+    // toString
+    @Override
+    public String toString() {
+        return "{" +
+                " size = '" + getSize() + "'" +
+                " price = '" + super.getPrice() + "'" +
+                " color = '" + super.getColor() + "'" +
+                " brand = '" + super.getBrand() + "'" +
+                "}";
+    }
 }

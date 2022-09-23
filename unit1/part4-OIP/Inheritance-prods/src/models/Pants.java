@@ -49,4 +49,15 @@ public class Pants extends Product {
     public int hashCode() {
         return Objects.hash(waist, super.getPrice(), super.getColor(), super.getBrand());
     }
+
+    // toString
+    @Override
+    public String toString() {
+        return "{" +
+                " waist = '" + getWaist() + "'" +
+                " price = '" + super.getPrice() + "'" +
+                " color = '" + super.getColor() + "'" +
+                " brand = '" + super.getBrand() + "'" +
+                "}";
+    }
 }

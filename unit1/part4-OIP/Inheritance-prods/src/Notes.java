@@ -70,4 +70,4 @@ public class Notes {
         // when calling an inherited method, safer to use super bc this will call the local method first
     // super can only call inherited methods
 
-
+// toString() - add to each child class and print one of each
