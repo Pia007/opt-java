@@ -53,6 +53,17 @@ public abstract class Product implements Comparable<Product> {
 
     @Override
     public int compareTo(Product specifiedObject) {
+        // sort alphabetically by class name then by price
+
+        // get product and specified obj class names
+        String className = this.getClass().getSimpleName();
+        String specClassName = specifiedObject.getClass().getSimpleName();
+
+        //check if the class names are not equal
+        if (!(className.equals(specClassName))) {
+            return className.compareTo(specClassName);
+        }
+
         return (int) Math.round(this.getPrice() - specifiedObject.getPrice());
     }
 }

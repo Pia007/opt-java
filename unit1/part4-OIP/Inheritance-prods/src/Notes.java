@@ -159,6 +159,12 @@ public class Notes {
             // next, override compareTo() - type cast the rounded difference between the current price and the specified objects price
             // now both Pants and shirts will inherit compareTo from Product
         // *Main - remove all code and replace with sample-two.txt, RUN AND all products are sorted by price from low to high
+//sort() the products by alphabetical order based on class type then sort the rest by price
+    //can get the class type by using getClass()
+    // can get the name using getSimpleName()
+    // *Product, inside compareTo get the class name of the current object
+        // then check if they are NOT equal, and compare then if they are not
+    // test and result will show all product sorted by class name then sorted by price
 
 
 

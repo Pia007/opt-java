@@ -25,7 +25,7 @@ public class Main {
                 new Shirt(Shirt.Size.LARGE, 29.99, "Blue", "ADIDAS"),
                 new Pants(34, 104.99, "Red", "JANGLER"),
         };
-
+        // test sort by class then sort by price
         Arrays.sort(products);
         printArray(products);
 
