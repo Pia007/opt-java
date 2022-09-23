@@ -16,6 +16,10 @@ public class Main {
         //print a shirt to see the enum
         System.out.println(shirt2);
         System.out.println(pants2);
+
+        // test fold() override
+        shirt.fold();
+        pants.fold();
     }
 
 }

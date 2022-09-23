@@ -28,6 +28,14 @@ public class Pants extends Product {
         this.waist = waist;
     }
 
+    // override fold()
+    @Override
+    public void fold() {
+        System.out.println("Hold pants upright.");
+        System.out.println("Fold one leg over the other.");
+        System.out.println("Fold pants from the bottom in thirds.");
+    }
+
     //equals()
     @Override
     public boolean equals(Object o) {

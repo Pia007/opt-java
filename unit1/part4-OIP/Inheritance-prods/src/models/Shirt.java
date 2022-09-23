@@ -35,6 +35,15 @@ public class Shirt extends Product {
         this.size = size;
     }
 
+    // override fold()
+    @Override
+    public void fold() {
+        System.out.println("Lay the shirt on a flat surface.");
+        System.out.println("Fold the shirt sideways");
+        System.out.println("Bring the sleeves in.");
+        System.out.println("Fold from the bottom up.");
+    }
+
     //equals()
     @Override
     public boolean equals(Object o) {

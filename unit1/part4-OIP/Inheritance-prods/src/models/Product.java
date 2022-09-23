@@ -46,4 +46,7 @@ public abstract class Product {
     public void setBrand(String brand) {
         this.brand = brand;
     }
+
+    // abstract - force each child to use the fold method
+    public abstract void fold();
 }

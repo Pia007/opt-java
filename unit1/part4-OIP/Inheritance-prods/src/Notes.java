@@ -84,3 +84,20 @@ public class Notes {
     // change getters and setters to reflect the enum Size
     // *Main - enum is explicitly static - can be accessed directly from the class
         // and give it one of the 5 values ex Shirt.Size.XL
+
+// abstract method - many ways to implement
+    // Parent - if implemented by parent, child class is forced to override it
+        // create only to force child classes to override it
+        // How? ex) public abstract void pay(double price);
+            // public - specify level of access
+            // abstract - can be implemented in different ways
+            // void - return type
+            // parameters
+    // requirements - evey product must be folded before sale
+        // must for every child to implement the fold method
+        // *Product define a public abstract method that forces every child class to define a method that returns void when fold() is called
+            // and it does not take any parameters
+        // abstract method does not have a body, is not concrete and can implemented in several ways
+        // each child class will have its own way of overriding it
+            //Shirt and Pants class override it
+        //*Main test
