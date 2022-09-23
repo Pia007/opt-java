@@ -171,5 +171,27 @@ public class Notes {
         // ex return Double.compare(super.getPrice(), o.getPrice());
     // Replace array with that from Quiz and sort from lowest to highest price
 
+// finalize the app
+    // data has shirts and pants - can store each line as an obj of the Product class
+    // create a function that returns a product array - getData()
+        // create a new obj of the fil input stream class to connect the product.txt file
+        // create a new obj from the scanner input class that will pick up the data from the file input stream
+        // create a product array
+        // create a for loop that will iterate as long as scan has a next line
+            // use switch check if scan.next() is Pants or Shirt
+                // set the elem at index to a new obj of the Pants or Shirt class
+                    // use the correct scanner for the data type of the fields
+                    // the Shirt constructor expects an enum value. Shirt.Size.valueOf(scan.next())
+        // close the scanner
+        // return the products array
+    // inside main class
+        // try to call getData() and store the array
+            // sort the array
+                // iterate over the array
+                    // print each product
+        // catch exception if it fails
+            // print the exception
+
+
 
 
