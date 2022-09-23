@@ -166,5 +166,10 @@ public class Notes {
         // then check if they are NOT equal, and compare then if they are not
     // test and result will show all product sorted by class name then sorted by price
 
+// Math,round() if diff, 0.5 will rd to 0,
+    // use Double.compare(double, double) to compare decimals
+        // ex return Double.compare(super.getPrice(), o.getPrice());
+    // Replace array with that from Quiz and sort from lowest to highest price
+
 
 

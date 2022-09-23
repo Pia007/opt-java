@@ -63,7 +63,7 @@ public abstract class Product implements Comparable<Product> {
         if (!(className.equals(specClassName))) {
             return className.compareTo(specClassName);
         }
-
-        return (int) Math.round(this.getPrice() - specifiedObject.getPrice());
+        // sort from lowest to highest with decimals
+        return Double.compare(this.getPrice(),specifiedObject.getPrice());
     }
 }
