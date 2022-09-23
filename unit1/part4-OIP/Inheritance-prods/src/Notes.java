@@ -71,3 +71,16 @@ public class Notes {
     // super can only call inherited methods
 
 // toString() - add to each child class and print one of each
+
+//Enum - an item that contains a limited number of constants
+    // used to ensure that something can only be a limited number of values
+    // defines a collection of static final constants
+    // size of a shirt should only be sm, med, lg, xl, xxl
+    // in shirt class - create a public enum
+        // constants must be in CAPS
+        // by default the values are final
+    // next change the SIZE field from a String to Size so that it can only be the number of constants
+    // next the constructor needs to receive an enum constant
+    // change getters and setters to reflect the enum Size
+    // *Main - enum is explicitly static - can be accessed directly from the class
+        // and give it one of the 5 values ex Shirt.Size.XL

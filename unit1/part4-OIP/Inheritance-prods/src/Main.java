@@ -7,12 +7,13 @@ public class Main {
     static final String FILE_NAME = "products.txt";
     public static void main(String[] args) {
 
-        Shirt shirt = new Shirt("SMALL",5.99, "blue", "Java Vuitton" );
+        //access the enum directly from the class
+        Shirt shirt = new Shirt(Shirt.Size.XL,5.99, "blue", "Java Vuitton" );
         Pants pants = new Pants(32, 21.99, "black", "Java Klein");
         Shirt shirt2 = new Shirt(shirt);
         Pants pants2 = new Pants(pants);
 
-        //print a shirt to see toString override
+        //print a shirt to see the enum
         System.out.println(shirt2);
         System.out.println(pants2);
     }

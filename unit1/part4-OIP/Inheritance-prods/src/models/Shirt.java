@@ -4,11 +4,16 @@ import java.util.Objects;
 
 public class Shirt extends Product {
 
-    // fields
-    private String size;
+    // enum
+    public enum Size {
+        SM, MED, LG, XL, XXL
+    }
 
-    //constructor
-    public Shirt (String size, double price, String color, String brand) {
+    // change String to Size enum
+    private Size size;
+
+    // add the enum to the constructor
+    public Shirt (Size size, double price, String color, String brand) {
         super(price, color, brand);
         this.size = size;
 
@@ -20,13 +25,13 @@ public class Shirt extends Product {
         this.size = source.size;
     }
 
-    //getters
-    public String getSize() {
-        return size;
+    //getters - change String to Size
+    public Size getSize() {
+        return this.size;
     }
 
     //setters
-    public void setSize(String size) {
+    public void setSize(Size size) {
         this.size = size;
     }
 
