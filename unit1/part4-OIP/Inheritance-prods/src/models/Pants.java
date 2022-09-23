@@ -3,7 +3,7 @@ package models;
 import java.util.Objects;
 
 // implement the interface
-public class Pants extends Product implements Discountable {
+public class Pants extends Product implements Discountable, Comparable<Pants> {
 
     // fields
     private int waist;
@@ -66,6 +66,13 @@ public class Pants extends Product implements Discountable {
         return Objects.hash(waist, super.getPrice(), super.getColor(), super.getBrand());
     }
 
+
+    // compareTo()
+    @Override
+    public int compareTo(Pants specifiedObject) {
+        return (int) Math.round(super.getPrice() - specifiedObject.getPrice());
+    }
+
     // toString
     @Override
     public String toString() {
@@ -76,4 +83,6 @@ public class Pants extends Product implements Discountable {
                 " brand = '" + super.getBrand() + "'" +
                 "}";
     }
+
+
 }

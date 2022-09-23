@@ -121,3 +121,33 @@ public class Notes {
         // *Main - use debugger to test
         // Interfaces allow polymorphism How?
             // Pants are discountable, can declare the object as type discountable
+// sort() - sorts Comparable objects
+    // Comparable is an interface that classes can implement
+        // defines one method, compareTo()
+        // expects a generic - like a function receives a parameter, a class or interface can receive a generic
+            // public interface Comparable<T> {} - <T> is the generic
+            // the generic fields the methods signature
+                // ex) public interface Comparable<T> {..... public in compareTo(T o) }  will have to override the compared to T
+                // ex) public interface Comparable<Pants> { ..... public in compareTo(Pants o)} will have to override the compared to pants
+        // products are required to be sorted by price
+            // *Pants - implement the Comparable interface and pass in the pass type generic   <Pants>
+                // now must override the compareTo() method of the Comparable interface
+                    // compareTo(Pants specifiedObject) - using specifiedObject instead of 'o', WHY?
+                        // a current object calls the method and is compared to the specified object
+                            // compare price of current obj against the price of the specified obj
+                            // How is an int used to compare the two
+                                // if return value is - (crr obj < spec obj), 0 (crr obj = spec obj), + (crr obj > spec obj)
+                            // in the return statement use super to subtract the specified obj from the current obj
+                                // do not use int alone, to type cast the result bc it could cause a inaccurate result
+                                        // use int Math.round()  ex)return (int) Math.round(super.getPrice() - specifiedObject.getPrice());
+                                            // Math.round() rounds to the nearest whole number  of type long
+                                            // then type cast to an int
+                            // * Main -test before sorting, create another Pants obj
+                                //compare pants to pants3...etc
+                // sort() can use compareTo to determine how to sort comparable objs
+                    // calls compareTo from one obj against a specified obj
+                    // when the result of compareTo is positive, sort knows that the current obj is > the specified obj and
+                        // will place the specified obj after the current.
+                        // repeats the process across the entire array from lowest to highest
+
+
