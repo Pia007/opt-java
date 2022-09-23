@@ -1,7 +1,7 @@
 package models;
 
-// make the product class abstract
-public abstract class Product {
+// make comparable
+public abstract class Product implements Comparable<Product> {
     // define fields that are common to shirt and pants classes
     private double price;
     private String color;
@@ -47,6 +47,12 @@ public abstract class Product {
         this.brand = brand;
     }
 
-    // abstract - force each child to use the fold method
     public abstract void fold();
+
+    //override compareTo
+
+    @Override
+    public int compareTo(Product specifiedObject) {
+        return (int) Math.round(this.getPrice() - specifiedObject.getPrice());
+    }
 }

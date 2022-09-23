@@ -149,5 +149,14 @@ public class Notes {
                     // when the result of compareTo is positive, sort knows that the current obj is > the specified obj and
                         // will place the specified obj after the current.
                         // repeats the process across the entire array from lowest to highest
+                // remove everything from main and copy everything from sample-one.txt in resources
+                    // use Arrays.sort(products)
+        // *Shirt class - make it comparable, both the pants and shirt classes have the same implementation of compareTo
+            // so define the compareTo implementation inside of the parent, Product, class
+                // both shirt and pants will inherit the same method
+        // Remove the Comparable interface and the compareTo() override from Pants and Shirts class
+        // Make the Product class comparable in the with <Product>
+            // next, override compareTo() - type cast the rounded difference between the current price and the specified objects price
+            // now both Pants and shirts will inherit compareTo from Product
 
 

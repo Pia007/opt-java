@@ -2,6 +2,7 @@ package models;
 
 import java.util.Objects;
 
+//
 public class Shirt extends Product {
 
     // enum
@@ -65,6 +66,11 @@ public class Shirt extends Product {
     public int hashCode() {
         return Objects.hash(size, super.getPrice(), super.getColor(), super.getBrand());
     }
+
+    // compareTo()
+//    public int compareTo(Shirt specifiedObject)  {
+//        return
+//    }
 
     // toString
     @Override

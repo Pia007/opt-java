@@ -2,8 +2,8 @@ package models;
 
 import java.util.Objects;
 
-// implement the interface
-public class Pants extends Product implements Discountable, Comparable<Pants> {
+// remove the Comparable interface
+public class Pants extends Product implements Discountable {
 
     // fields
     private int waist;
@@ -67,11 +67,11 @@ public class Pants extends Product implements Discountable, Comparable<Pants> {
     }
 
 
-    // compareTo()
-    @Override
-    public int compareTo(Pants specifiedObject) {
-        return (int) Math.round(super.getPrice() - specifiedObject.getPrice());
-    }
+    // removed compareTo()
+//    @Override
+//    public int compareTo(Pants specifiedObject) {
+//        return (int) Math.round(super.getPrice() - specifiedObject.getPrice());
+//    }
 
     // toString
     @Override
