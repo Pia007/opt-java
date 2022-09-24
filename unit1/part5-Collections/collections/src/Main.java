@@ -1,5 +1,9 @@
+import java.util.HashMap;
+import java.util.Map;
+
+//HashCode and Equals Example
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Map<Person,String> map= new HashMap<>();
     }
 }
