@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.LinkedList;
 
-public class RuntimeComparison {
+public class ArrayAndListComp {
     public static void main(String[] args) {
         ArrayList<Integer> array = new ArrayList<>();
 
