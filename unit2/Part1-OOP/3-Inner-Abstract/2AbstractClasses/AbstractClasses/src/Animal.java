@@ -3,7 +3,6 @@ public abstract class Animal {
     //fields
     private String name;
 
-
     //constructor
     public Animal(String name) {
         this.name = name;
@@ -23,10 +22,24 @@ public abstract class Animal {
 
 }
 
-// Abstract Class v Interface
-// not all methods of an abstract class have to be abstract
-// entire interface is abstract - no fields, no constructors, only specify
-// methods that must be implemented
-// Animal Class is an abstract class
-// it has fields, constructors and some methods are abstract
-
+// Part 2: Abstract Class v Interface
+    // fields
+        // abstract class can have fields
+        // interface cannot have fields
+    // constructors
+        // interfaces cannot have constructors
+        // abstract classes can have constructors
+    // methods
+        // not all methods of an abstract class have to be abstract -See Animal class
+            // abstract classes can have defined methods, methods with an implementation
+            // methods are required to be implemented by the classes that inherit from the abstract class
+            // methods of an abstract class can have any access modifier
+        // all interface methods are abstract methods
+            // methods are required to be implemented by the classes that implement the interface
+    // variables
+        // abstract class can have member variables that are inherited by the subclasses
+        // interfaces can have variables
+            // but they are all public, static and final - cannot be changed, constant
+    // access modifiers
+        // abstract class can have any access modifier
+    // interface are automatically public

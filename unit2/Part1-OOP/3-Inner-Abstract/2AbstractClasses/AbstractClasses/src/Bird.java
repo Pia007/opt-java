@@ -1,11 +1,11 @@
-public abstract class Bird extends Animal {
+public abstract class Bird extends Animal implements CanFly {
 
-    //constructor
+    //construtor
     public Bird(String name) {
         super(name);
     }
 
-    // overriding the abstract methods - make the class concrete and valid
+    // overriding the abstract methods from the animal class - make the class concrete and valid
     @Override
     public void eat() {
         System.out.println(getName() + " is pecking");
@@ -16,8 +16,11 @@ public abstract class Bird extends Animal {
         System.out.println("Breathe in, breathe out, repeat");
     }
 
-    // abstract method
-    public abstract void fly();
+    // implementing fly() method from CanFly interface - make the class concrete and valid
+    @Override
+    public void fly() {
+        System.out.println(getName() + " is flapping its wings");
+    }
 
 }
 
@@ -25,4 +28,6 @@ public abstract class Bird extends Animal {
     // abstract fly() method that individual birds will implement
     // cannot directly instantiate the Bird class in Main bc it is abstract
     // must create a new class that extends the Bird class
+
+// Part 2: update the bird class to implement the CanFly interface
 

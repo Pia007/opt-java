@@ -4,10 +4,10 @@ public class Parrot extends Bird {
     public Parrot(String name) {
         super(name);
     }
-
-    // overriding the abstract methods - make the class concrete and valid
-    @Override
-    public void fly() {
-        System.out.println("Flitting from branch to branch");
-    }
 }
+
+// Part 2:update Parrot class
+// Why? Bird class now implements CanFly interface
+// Parrot class extends Bird class
+// Parrot class automatically inherits the fly() method from the Bird class
+// delete the fly() method from the Parrot class
