@@ -2,11 +2,18 @@ public class Main {
     public static void main(String[] args) throws Exception {
 
         // instantiate a new DeskPhone object
-        // ITelephone timsPhone = new ITelephone(); // cannot instantiate an interface
+        // ITelephone boringPhone = new ITelephone(); // cannot instantiate an interface
         ITelephone boringPhone;
         boringPhone = new DeskPhone(1234567890);
         boringPhone.powerOn();
         boringPhone.callPhone(1234567890);
+        boringPhone.answer();
+
+        // instantiate a new MobilePhone object
+
+        boringPhone = new MobilePhone(987654321);
+        boringPhone.powerOn();
+        boringPhone.callPhone(987654321);
         boringPhone.answer();
     }
 }
