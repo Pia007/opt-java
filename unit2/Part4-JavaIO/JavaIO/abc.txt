@@ -1,0 +1,4 @@
+Hello World
+This is a new line
+abcde
+I set the boolean to 'true' and appended the data.
