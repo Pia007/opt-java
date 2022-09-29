@@ -5,7 +5,7 @@ public class MyApp {
     public static void main(String[] args) {
 
         // create the object
-        Coach theCoach = new BaseballCoach();
+        Coach theCoach = new TrackCoach();
 
 
         // use the object
@@ -13,5 +13,7 @@ public class MyApp {
     }
 }
 
-// requirement - app must be able to support different types of coaches
-    // How? Use an interface - all Coaches will have a method called getDailyWorkout()
+// requirements
+    // app must be able to support different types of coaches
+        // How? Use an interface - all Coaches will have a method called getDailyWorkout()
+    // coach implemetation should be configurable and not hard coded

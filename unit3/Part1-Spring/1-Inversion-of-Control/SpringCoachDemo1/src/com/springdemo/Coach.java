@@ -6,4 +6,4 @@ public interface Coach {
     public String getDailyWorkout();
 }
 
-
+// coach interface to allow different types of coaches
