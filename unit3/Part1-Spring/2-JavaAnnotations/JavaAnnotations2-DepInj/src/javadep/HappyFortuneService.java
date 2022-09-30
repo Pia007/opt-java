@@ -12,6 +12,6 @@ public class HappyFortuneService implements FortuneService {
 }
 
 //Autowiring Example -constructor injection ex
-	// HappyFortuneService is a component that implements FortuneService
+	// HappyFortuneService, RandomFortuneService, DatabaseFortuneService and RestFortuneService all implement FortuneService
 	// @Component id is happyFortuneService
 		// Spring will scan for a component that implements FortuneService
