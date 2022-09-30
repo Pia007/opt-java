@@ -17,6 +17,8 @@ public class SetterDemoApp {
         System.out.println(theCoach.getEmailAddress());
         System.out.println(theCoach.getTeam());
 
+        // no changes need after adding properties file, just run the app again
+
         // close the context
         context.close();
     }
