@@ -1,25 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-    xmlns:context="http://www.springframework.org/schema/context"
-    xsi:schemaLocation="http://www.springframework.org/schema/beans
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
     <!-- Define your beans here -->
 
-    <!--   define the dependency -->
+    <!-- 3. define the dependency -->
     <bean id="myFortuneService"
-        class="springDemo.HappyFortuneService">
+          class="HappyFortuneService">
     </bean>
 
-    <!-- inject dependency into the class   -->
+    <!-- constructor injection   -->
     <bean id="myCoach"
-          class="springDemo.TrackCoach">
+          class="BaseballCoach">
         <constructor-arg ref="myFortuneService"/>
     </bean>
+
+    <!-- new bean -->
+    <bean id="myCricketCoach"
+          class="CricketCoach">
+
+        <!-- setter injection -->
+        <property name="fortuneService" ref="myFortuneService"/>
+    </bean>
+
+
+
 </beans>
+
+        <!--  how does Spring process the config file?
+            1 when myfortuneService is created, Spring constructs the object by calling the default constructor
+                HappyFortuneService myFortuneService = new HappyFortuneService();
+            2. when myCoach is created, Spring creates a Baseball Coach object by calling the default constructor and
+                    passes the myFortuneService object to the constructor
+                Baseball myCoach = new Baseball(myFortuneService);
+
+            For the setter injection, Spring calls the setter method to inject the dependency
+            Spring will look for a method called setFortuneService(), because the name attribute is fortuneService, and pass the myFortuneService object to it
+
+         -->
 
 
 
