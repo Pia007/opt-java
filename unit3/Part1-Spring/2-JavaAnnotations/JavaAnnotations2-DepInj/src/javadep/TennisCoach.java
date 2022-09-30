@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class TennisCoach implements Coach {
 
 	// fields
+	@Autowired
 	private FortuneService fortuneService;
 
 	// create a no-arg constructor
@@ -12,7 +13,7 @@ public class TennisCoach implements Coach {
 		System.out.println(">> TennisCoach: inside default constructor");
 	}
 
-	// create construnctor for injection
+	// create constructor for injection
 	// @Autowired
 	// public TennisCoach(FortuneService theFortuneService) {
 	// 	fortuneService = theFortuneService;
@@ -36,15 +37,14 @@ public class TennisCoach implements Coach {
 	}
 
 	// method injection
-	@Autowired
-	public void doSomeCrazyStuff(FortuneService theFortuneService) {
-		System.out.println(">> TennisCoach: inside doSomeCrazyStuff() method");
-		fortuneService = theFortuneService;
-	}
+//	@Autowired
+//	public void doSomeCrazyStuff(FortuneService theFortuneService) {
+//		System.out.println(">> TennisCoach: inside doSomeCrazyStuff() method");
+//		fortuneService = theFortuneService;
+//	}
 
 }
 
 // Autowiring Example
-	// Method Injection
-		// doSomeCrazyStuff() method
-		// @Autowired annotation on the method
+	// field Injection
+	// @Autowired annotation on the field

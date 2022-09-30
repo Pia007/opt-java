@@ -26,11 +26,9 @@ public class AnnotationDemoApp {
 }
 
 // Java Annotations - Dependency Injection and Autowiring
-	// Setter Injection - TennisCoach.java
-		// inject dependencies by calling setter methods on the
-		//1. Create setters in your class for injection
-		//2. Configure the dependency injection with @Autowired
-	// Method Injection - TennisCoach.java
-		// @Autowired annotation on the method
+	// Filed Injection - TennisCoach.java
+		// inject dependencies by setting field values directly into the class
+		// uses Java Reflection to inject dependencies
+		// NO NEED FOR SETTER METHODS
 
 
