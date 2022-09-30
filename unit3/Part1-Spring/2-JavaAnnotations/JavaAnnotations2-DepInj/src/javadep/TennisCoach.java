@@ -1,7 +1,12 @@
-import org.springframework.stereotype.Component;
+package javadep;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.context.annotation.Scope;
+import org.springframework.beans.stereotype.Component;
 
 @Component
+@Scope("prototype")
 public class TennisCoach implements Coach {
 
 	// fields
@@ -36,15 +41,6 @@ public class TennisCoach implements Coach {
 	public String getDailyFortune() {
 		return fortuneService.getFortune();
 	}
-
-	// method injection
-//	@Autowired
-//	public void doSomeCrazyStuff(FortuneService theFortuneService) {
-//		System.out.println(">> TennisCoach: inside doSomeCrazyStuff() method");
-//		fortuneService = theFortuneService;
-//	}
-
 }
 
-// Autowiring Example
-	// @Qualifier - now use RandomFortuneService instead of HappyFortuneService
+//@Scope Annotation
