@@ -19,11 +19,11 @@ public class TennisCoach implements Coach {
 	// }
 
 	// setter method for injection
-	@Autowired
-	public void setFortuneService(FortuneService theFortuneService) {
-		System.out.println(">> TennisCoach: inside setFortuneService() method");
-		fortuneService = theFortuneService;
-	}
+	// @Autowired
+	// public void setFortuneService(FortuneService theFortuneService) {
+	// 	System.out.println(">> TennisCoach: inside setFortuneService() method");
+	// 	fortuneService = theFortuneService;
+	// }
 
 	@Override
 	public String getDailyWorkout() {
@@ -35,11 +35,16 @@ public class TennisCoach implements Coach {
 		return fortuneService.getFortune();
 	}
 
+	// method injection
+	@Autowired
+	public void doSomeCrazyStuff(FortuneService theFortuneService) {
+		System.out.println(">> TennisCoach: inside doSomeCrazyStuff() method");
+		fortuneService = theFortuneService;
+	}
+
 }
 
 // Autowiring Example
-	// Setter Injection
-		// @Component - default bean ID is tennisCoach
-		// create no -arg constructor in your class for setter injection
-		// create a setter method in your class for injection
-		// configure the dependency injection with @Autowired
+	// Method Injection
+		// doSomeCrazyStuff() method
+		// @Autowired annotation on the method
