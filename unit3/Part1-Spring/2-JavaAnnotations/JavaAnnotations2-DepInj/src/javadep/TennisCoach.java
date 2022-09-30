@@ -1,5 +1,3 @@
-package javadep;
-
 import org.springframework.stereotype.Component;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -9,9 +7,21 @@ public class TennisCoach implements Coach {
 	// fields
 	private FortuneService fortuneService;
 
+	// create a no-arg constructor
+	public TennisCoach() {
+		System.out.println(">> TennisCoach: inside default constructor");
+	}
+
 	// create construnctor for injection
+	// @Autowired
+	// public TennisCoach(FortuneService theFortuneService) {
+	// 	fortuneService = theFortuneService;
+	// }
+
+	// setter method for injection
 	@Autowired
-	public TennisCoach(FortuneService theFortuneService) {
+	public void setFortuneService(FortuneService theFortuneService) {
+		System.out.println(">> TennisCoach: inside setFortuneService() method");
 		fortuneService = theFortuneService;
 	}
 
@@ -20,16 +30,16 @@ public class TennisCoach implements Coach {
 		return "Practice your backhand volley";
 	}
 
-	// add new method for fortunes
 	@Override
 	public String getDailyFortune() {
 		return fortuneService.getFortune();
 	}
+
 }
 
 // Autowiring Example
-	// Constructor Injection
+	// Setter Injection
 		// @Component - default bean ID is tennisCoach
-		// create a constructor in your class for injection
-		// @Autowired - Spring will scan for a component that implements FortuneService
-			// and inject it into the Coach implementation
+		// create no -arg constructor in your class for setter injection
+		// create a setter method in your class for injection
+		// configure the dependency injection with @Autowired
