@@ -6,7 +6,7 @@ public class TennisCoach implements Coach {
 
 	// fields
 	@Autowired
-	@Qualifier("happyFortuneService")  // use this qualifier to specify which bean to use - default name of the bean id
+	@Qualifier("randomFortuneService")  // use this qualifier to specify which bean to use - default name of the bean id
 	private FortuneService fortuneService;
 
 	// create a no-arg constructor
@@ -47,4 +47,4 @@ public class TennisCoach implements Coach {
 }
 
 // Autowiring Example
-	// @Qualifier to tell Spring which bean to use
+	// @Qualifier - now use RandomFortuneService instead of HappyFortuneService
