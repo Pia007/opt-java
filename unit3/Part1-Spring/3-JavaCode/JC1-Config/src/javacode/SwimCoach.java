@@ -1,25 +1,46 @@
-import java.beans.BeanProperty;
+package javacode;
 
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.beans.factory.annotation.Value;
 
-@Configuration
-@ComponentScan("javacode")
-public class SportConfig {
+public class SwimCoach implements Coach {
 
-    // define bean for sad fortune service
-    @Bean
-    public FortuneService sadFortuneService() {
-        return new sadFortuneService();
+    //field
+    private FortuneService fortuneService;
+
+    // ref the values from the properties file
+    @Value("${opt.email}")
+    private String email;
+
+    @Value("${opt.team}")
+    private String team;
+
+    //constructor
+    public SwimCoach(FortuneService theFortuneService) {
+        fortuneService = theFortuneService;
     }
 
-    // define bean for swim coach AND inject dependency
-    @Bean
-    public Coach swimCoach(){
-        SwimCoach mySwimCoach = new SwimCoach(sadFortuneService());
-        return mySwimCoach;
+    //getter and setter methods
+    public String getEmail() {
+        return email;
     }
 
+    public String getTeam() {
+        return team;
+    }
+
+    @Override
+    public String getDailyWorkout() {
+        return "Swim 1000 meters as a warm up.";
+    }
+
+    @Override
+    public String getDailyFortune() {
+        return fortuneService.getFortune();
+    }
 }
 
-// Spring configuration with Java code
+// Java Code - injecting values from properties file
+    // Process
+    // Create a properties file
+    // load the properties file into the spring config file
+    // reference the values from the properties file
