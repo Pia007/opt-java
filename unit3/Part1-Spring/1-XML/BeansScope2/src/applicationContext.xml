@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- loadiing properties names from properties file -->
+    <context:property-placeholder location="classpath:dev.properties" />
+
+    <!-- Define your beans here -->
+
+    <!-- 3. define the dependency -->
+    <bean id="myFortuneService"
+          class="HappyFortuneService">
+    </bean>
+
+    <!-- constructor injection   -->
+    <bean id="myCoach"
+          class="BaseballCoach">
+        <constructor-arg ref="myFortuneService"/>
+    </bean>
+
+    <!-- new bean -->
+    <bean id="myCricketCoach"
+          class="CricketCoach">
+
+        <!-- setter injection -->
+        <property name="fortuneService" ref="myFortuneService"/>
+
+        <!-- inject literal values -->
+        <property name="emailAddress" value="cricketdemo@demo.com"/>
+
+        <property name="team" value="Legacy Code"/>
+
+        <!-- referencing the values from the properties file -->
+        <property name="emailAddress" value="${opt.email}"/>
+        <property name="team" value="${opt.team}"/>
+    </bean>
+
+
+
+</beans>
+
+
+
+
+
