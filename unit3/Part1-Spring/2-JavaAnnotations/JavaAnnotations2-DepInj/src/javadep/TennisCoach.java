@@ -1,12 +1,14 @@
 package javadep;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.beans.context.annotation.Scope;
 import org.springframework.beans.stereotype.Component;
 
+
 @Component
-@Scope("prototype")
 public class TennisCoach implements Coach {
 
 	// fields
@@ -19,7 +21,19 @@ public class TennisCoach implements Coach {
 		System.out.println(">> TennisCoach: inside default constructor");
 	}
 
-	// create constructor for injection
+	// define my init method
+	@PostConstruct
+	public void doMyStartupStuff() {
+		System.out.println(">> TennisCoach: inside of doMyStartupStuff");
+	}
+
+	// define my destroy method
+	@PreDestroy
+	public void doMyCleanupStuff() {
+		System.out.println(">> TennisCoach: inside of doMyCleanupStuff");
+	}
+
+	// create construnctor for injection
 	// @Autowired
 	// public TennisCoach(FortuneService theFortuneService) {
 	// 	fortuneService = theFortuneService;
@@ -43,4 +57,13 @@ public class TennisCoach implements Coach {
 	}
 }
 
-//@Scope Annotation
+// Bean Lifecycle Methods with Annotations
+	// @PostConstruct and @PreDestroy
+		// any method name
+		// can have any access modifier
+		// can have any return type - void is common
+			// although you can have a return type, it will be ignored
+		// method should be no-arg
+	// for prototype scope, Spring does not call the @PreDestroy method
+		// because the container does not manage the complete lifecycle of a prototype bean
+		// only when the application closes down, the container will call the @PreDestroy method
