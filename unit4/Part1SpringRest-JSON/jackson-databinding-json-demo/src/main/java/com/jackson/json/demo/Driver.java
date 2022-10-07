@@ -39,3 +39,10 @@ public class Driver {
     // has a nested obj and an array
     // will cause an error if code is not modified nested objs
     // need to create a new class for the address
+// Ignoring Properties
+    // if new properties are added to JSON ---> error if code is not updated
+    // modify code to ignore new properties
+    // Test : add a new property to sample-full.JSON
+        // "company": "Acme Inc"  and run app ---> error..."not marked as ignorable"
+    // annotate Student class with @JsonIgnoreProperties(ignoreUnknown = true)
+        // run app ---> no error

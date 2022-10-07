@@ -1,5 +1,9 @@
 package com.jackson.json.demo;
 
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Student {
 
     // fields
