@@ -1,0 +1,44 @@
+Spring REST Support
+
+Spring Web MVC - supports Spring REST
+    * @RestController
+        * Extension of @Controller annotation
+        * supports REST req and res
+Spring REST automatically converts Java objs to JSON
+    * Jackson Project must be b classpath or pom.xml
+
+Creating a REST Controller
+1. Add Maven dependency for Spring MVC and Jackson project - pom.xml
+    a. spring-webmvc - automatically get all supporting dependencies
+    b. jackson project - handles converting JSON <--> Java Objs
+    c. javax-servlet-api - Springs Dispatcher Servlet initializer need this api
+2. Add code for All Java Config: @Config
+    a. DemoAppConfig.java - @Configuration, @EnableWebMvc, @ComponentScan
+3. Add code for All Java Config: Servlet Initializer
+    a: Web App Initializer - AbstractAnnotationConfigDispatcherServletInitializer
+       Spring MVC provides support for web app initialization
+           - code will be automatically detected
+           - code will initialize the servlet container
+           1 need to extend the abstract base class
+           2 override required methods
+           3 specify servlet mapping and location of app config
+    b: MySpringMvcDispatcherServletInitializer.java
+4. Use @RestController to create REST Service
+    a: DemoRestController
+
+NOTE:
+@Controller vs RestController
+@Controller - marks classes Spring MCV Controller
+    -- specialized version of @Component annotation
+    -- class is a web controller
+    -- requires @ResponseBody on every handler method
+
+@RestController - used in RESTful Web Services
+    -- combo of Controller and @ResponseBody
+    -- specialized version of @Controller annotation
+    -- class in a controller where @RequestMapping methods
+        -- assumes @ResponseBody semantics by default
+    -- does not NEED @ResponseBody on every handler method
+
+******************
+
