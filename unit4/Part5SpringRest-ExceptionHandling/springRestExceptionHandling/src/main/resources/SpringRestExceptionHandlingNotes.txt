@@ -1,0 +1,67 @@
+2 SPRING REST - EXCEPTION HANDLING
+
+Handling Exception
+- currently a more info is shown then needs to be on the html page when the id is out of bounds
+- need to be able to handle the exception and return error as JSON
+    -- want to show status 404, a message, and timestamp
+
+How?
+REST Client --> /api/students/999 bad data --> REST Service (throws and exception)
+REST Client <-- exception error msg as JSON <-- REST Service (exception handler)
+
+
+Process
+1. Create a custom error response class (StudentErrorResponse.java)
+    a: class will be sent back to client as JSON
+    b: define as Java class, 3 fields( status, message, timestamp), constructors, getters/setters
+2. Create a custom exception class (StudentNotFoundException.java)
+    a: will be used by the REST Service
+    b: if student not found --> exception
+    c: will extend RuntimeException
+    d: the constructor will use the RuntimeException message (super.message)
+3. Update REST service to throw exception if student not found (StudentRestController.java)
+    a: in the method to get the student based on Id, check the student vs the list size
+        -- is student id > student list size or < 0
+            -- truthy --> exception
+4. Add an exception method using @ExceptionHandler (StudentRestController.java)
+    a: define the method
+    b: returns a ResponseEntity
+        -- wrapper for the HTTP res obj
+        -- can control status code, headers, and res body
+
+5. Test the app
+
+6. Edge cases:
+    a: What if string chars are entered for id -
+        - browser Error 404 Bad Request
+        - console exception
+            -- .MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int';
+                    nested exception is java.lang.NumberFormatException: For input string: "hggh"]
+    b: add exception handler for edge cases (StudentRestController.java)
+        HOW?
+           Modify code to handle generic exceptions - catch all
+
+*************************
+
+SPRING REST - GLOBAL EXCEPTION HANDLING
+    -- reusable
+    -- centralizes exception handling
+    Previous coding only works for a specific REST controller
+    Will have multiple REST controllers in larger projects
+
+Spring @ControllerAdvice
+    -- like an interceptor/filter
+    -- real time use of AOP - Aspect Oriented Programming
+        -- can pre-process reqs to controllers
+        -- can post-process res to handle exceptions
+How?
+REST Client --> /api/students/9999 --> Controller Advice(pre-process request) -> REST Service
+REST Client <-- JSON error obj <-- Controller Advice(Exception Handler(s)) <- REST Service (throws Exception)
+
+Process
+1. Create new @ControllerAdvice (StudentRestExceptionHandler.java)
+2. Refactor REST service ... remove exception handling code (StudentRestController.java)
+3. Add the exception handling code to @ControllerAdvice (StudentRestExceptionHandler.java)
+4. Test the App
+
+
