@@ -1,0 +1,21 @@
+2 SPRING REST - PATH VARIABLES
+
+Path Variables - {pathVariable}
+- retrieve a student by id
+    -- /api/students/{studentId}
+- parameterize path or endpoint to accept data
+
+How?
+REST Client --> /api/students/{studentId} --> REST Service
+REST Client <-- student object with that id <-- REST Service
+
+NOTE: Jackson Project converts the Java obj to JSON
+
+Process
+1. Add request mapping to Spring Rest Service (StudentRestController)
+    a: define endpoint for /students/{studentId}
+    b: bind the path variable to method parameter using @PathVariable
+    c: ArrayList of students
+    d: Populate the students
+    e:  return the student at that given studentId
+
