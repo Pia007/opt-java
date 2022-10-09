@@ -1,0 +1,23 @@
+Spring REST Retrieve Java Obj as JSON
+
+Convert Java Obs to JSON
+REST Service returns List<Students>
+
+Spring REST automatically converts Java objs to JSON
+    * Jackson Project must be b classpath or pom.xml
+
+Spring REST Service
+    * REST Client --> /api/students -->  REST Service
+    * REST Client <-- JSON Array (converted by Spring REST & Jackson) <--  REST Service (will send a list)
+
+Process
+1. Create Student class
+    a: fields, constructors and getters/setters
+2. Create Spring REST Service using @RestController
+    a: define StudentRESTController class
+    b: define endpoint to return a list of students
+        -- create a list of students
+        -- add some students
+3. Test the api
+******************
+
