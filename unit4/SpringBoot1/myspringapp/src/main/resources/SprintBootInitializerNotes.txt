@@ -1,0 +1,12 @@
+SPRING BOOT INITIALIZER
+ -- creates a starter Spring project
+ -- select your dependencies
+ -- creates a Maven/Gradle project
+ -- import to your IDE
+
+Process
+1. Configure project via the spring Initializer website
+2. Download Zip, unzip, import Maven project into IDE
+
+NOTE: After getting started an checking localhost:8080, Whitelabel Error Page is ok
+
