@@ -26,9 +26,35 @@ SPRING BOOT ACTUATOR
     (NOV 2021 UPDATE)
         management.endpoints.web.exposure.include=heath,info
         management.info.env.enabled=true
-
- MUST BE CAREFUL TO USE SECURITY MEASURES TO KEEP THE ACTUATORS FROM BEING EXPOSED
-
 Process to use Actuator
 1. edit POM file to add spring-boot-starter-actuator
 2. view actuator endpoint: health and info(must customize)
+
+*************************************************
+SPRING SECURITY
+ MUST BE CAREFUL TO USE SECURITY MEASURES TO KEEP THE ACTUATORS FROM BEING EXPOSED
+
+Secure endpoints
+Spring Security - will require login
+    Default username = user
+    Default password =  IS in the console
+
+Override Defaults - application.properties
+spring.security.user.name=<username>
+spring.security.user.password=<password>
+
+Customizing Spring Security for actuator
+-- use db for roles, encrypt passwords etc..
+1. Set up a Security config
+2. Override configure
+3. auth.jdbcAuthentication
+4. authorize on request for matchers on a given endpoint
+
+Exclude Endpoints
+management.endpoints.web.exposure.exclude=heath,info
+
+Process
+1. edit POM file - rebuild app then rerun, check console for pwd
+2. verify security on endpoints -- ex) actuator/mappings
+    NOTE ALL ENDPOINTS REQUIRE INITIAL LOGIN
+3. disable endpoints
