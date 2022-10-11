@@ -1,0 +1,27 @@
+RUN SPRING BOOT FROM THE COMMANDLINE
+   -- no need to have the IDE open or running
+   -- Spring Boot has an embedded server in the JAR file
+   -- app is self contained
+
+Commands:
+1. java -jar
+     ex) java -jar myspringapp.jar  (name in pom.xml)
+2. mvn spring-boot:run
+    -- if the correct version of Maven is not present or on path, will automatically download the correct version
+    -- if already installed
+	mvn clean compile test
+    -- can pkg the app, jar file
+	mvn package or ./mvnw package
+    -- run application using spring boot pluggin
+	mvn spring-boot:run
+
+Git Bash
+1.cd into project
+2. mvn package or ./mvnw package - build project
+	will create a JAR file in the target firection
+3. cd target, ls and will see the app Jar file
+4. java -jar myspringapp-0.0.1-SNAPSHOT.jar ---> enter
+5. app will run, test in browser localhost:8080
+6. cd ..
+7. mvn spring-boot:run or ./mvnw spring-boot:run ---> enter
+8. test in browser
