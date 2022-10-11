@@ -1,0 +1,60 @@
+SPRING BOOT ACTUATOR
+ -- exposes endpoints to monitor and manage application
+ -- check health
+ -- access application metrics
+ HOW? add dependency to POM file
+    -- rest endpoints will automatically be added to your application
+    -- no need to write additional code, free endpoints to use
+    -- all endpoints are prefixed with /actuator
+        -- /health: app health info, status, customizable, exposed by default
+            localhost:8080/actuator/health
+        -- /info: project info, empty by default, exposed by default
+           -- must customize, must details as you like
+           How? update application.properties
+           -- info.app.name=My Spring App
+              info.app.description=A sample Spring Boot App
+              info.app.version=1.0.0
+           localhost:8080/actuator/info
+ more Actuator endpoint examples, 10+
+ /auditevents - audit events for your app
+ /beans - list of all beans registered in the Spring app context
+ /mappings - List of all @RequestMappings paths
+
+ To expose all the actuator endpoints over HTTP, add the code below to applications.properties
+    -- can use wildcard "*" to expose all
+    -- can expose individual; endpoints with a comma-delimited list
+    (NOV 2021 UPDATE)
+        management.endpoints.web.exposure.include=heath,info
+        management.info.env.enabled=true
+Process to use Actuator
+1. edit POM file to add spring-boot-starter-actuator
+2. view actuator endpoint: health and info(must customize)
+
+*************************************************
+SPRING SECURITY
+ MUST BE CAREFUL TO USE SECURITY MEASURES TO KEEP THE ACTUATORS FROM BEING EXPOSED
+
+Secure endpoints
+Spring Security - will require login
+    Default username = user
+    Default password =  IS in the console
+
+Override Defaults - application.properties
+spring.security.user.name=<username>
+spring.security.user.password=<password>
+
+Customizing Spring Security for actuator
+-- use db for roles, encrypt passwords etc..
+1. Set up a Security config
+2. Override configure
+3. auth.jdbcAuthentication
+4. authorize on request for matchers on a given endpoint
+
+Exclude Endpoints
+management.endpoints.web.exposure.exclude=heath,info
+
+Process
+1. edit POM file - rebuild app then rerun, check console for pwd
+2. verify security on endpoints -- ex) actuator/mappings
+    NOTE ALL ENDPOINTS REQUIRE INITIAL LOGIN
+3. disable endpoints
