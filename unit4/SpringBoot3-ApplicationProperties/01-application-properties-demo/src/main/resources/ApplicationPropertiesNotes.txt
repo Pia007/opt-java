@@ -1,0 +1,15 @@
+INJECTING CUSTOM APPLICATION PROPERTIES
+
+Application Properties File
+  - can read info by default from standard properties file
+  - src/main/resources/application.properties
+  - can define any custom properties
+  - access via @Value annotation
+
+Process"
+1. Define custom properties in application.properties
+    coach.name=Gru
+    team.name=Minions
+2. Inject properties into Spring Boot application using @Value
+    - FunRestController - inject properties for coach.name and team.name using @Value
+
