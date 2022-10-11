@@ -1,0 +1,7 @@
+SPRING BOOT DEV TOOLS
+ -- automatically rebuilds app when code is updated
+ How? add dependency to the POM file
+
+ Note: To auto-run app after each change
+    File --> Settings --> Advanced Settings --> Compiler ( check box - auto make to start.....)
+

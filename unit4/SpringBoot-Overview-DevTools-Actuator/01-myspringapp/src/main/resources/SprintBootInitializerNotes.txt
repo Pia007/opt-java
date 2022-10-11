@@ -1,0 +1,83 @@
+SPRING BOOT INITIALIZER
+ -- creates a starter Spring project
+ -- select your dependencies
+ -- creates a Maven/Gradle project
+ -- import to your IDE
+
+Process
+1. Configure project via the spring Initializer website
+2. Download Zip, unzip, import Maven project into IDE
+
+NOTE: After getting started an checking localhost:8080, Whitelabel Error Page is ok
+
+A. REST Controller
+  1. Create FunRestController, then re-run app
+
+***************************************************
+MAVEN PROJECT STRUCTURE
+
+About @SpringBootApplication:
+-- composed of other annotations
+  -- @EnableAutoConfiguration, @ComponentScan, @Configuration
+1. @EnableAutoConfiguration - enables Spring Boot's auto config support
+2. @ComponentScan - enables component scanning of current pkg & recursively scans sub-pkgs
+3. @Configuration - register extra beans with @Bean or import other configuration classes
+
+About Main App Class (MySpringAppApplication.java)
+-- place in the root pkg above other pkgs
+WHY?
+-- defines base search pkg
+    -- allows default component scanning
+    -- base pkg does not need to be explicitly referenced
+
+About the resources folder
+1. application.properties (in resources folder)
+-- created by Spring initializer
+-- initially empty
+-- can add Spring Boot properties
+    ex) server.port=8787
+    ex) coach.name=Action Jackson
+How is data read from it?
+   -- field inside of your class
+   ex) @Value("${coach.name}")
+       private String coachName;
+
+2. static folder
+   -- by default Spring Boot loads resources from this folder
+
+NOTE: do not use src/main/webapp if your app is pkged' as JAR,
+    Why? Only works on WAR and is ignored by most build tools if project is pkged as a JAR
+
+3. templates - loaded by default
+    Spring Boot has auto-config for:
+    -- FreeMark
+    -- Thymeleaf
+    -- Mustache
+
+About test folder
+    -- unit test created by Spring initializer
+    -- can add custom test
+
+**************************************************
+
+SPRING BOOT STARTERS - Curated list of dependencies
+    -- grouped together, tested and verified by the Spring Dev Team, 30+
+    -- easy to get started with Spring Boot,less Maven config
+Examples:
+1. Spring Boot Starter-Web  - select Web dependency in spring initializer
+    - spring-web, spring-webmvc, hibernate-validator, json, tomcat
+2. Spring Boot Starter Security - adding Spring Security support
+3. Spring Boot Starter Data Jpa - spring database support with JPA and Hibernate
+
+SPRING BOOT STARTER PARENT
+-- special starter that provides Maven defaults
+    -- default compiler level
+    -- UTF-8 source encoding
+    -- etc
+-- spring-boot-starter inherits the versions from the parent
+
+
+*******************************************************
+SPRING BOOT DEV TOOLS
+ -- automatically restarts app when code is updated
+ How? add dependency to the POM file
