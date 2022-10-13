@@ -18,6 +18,12 @@ Process:
 4. Create DAO implementation
 5. Create REST controller
 
+Methods
+1. Get a list of employees
+2. Get a single employee
+3. Add a new employee
+4. Update an existing employee
+5. Delete an employee
 Architecture
 Employee REST CONTROLLER <---> Employee Service <---> Employee DAO(Hibernate) <---> DB
 

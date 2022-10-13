@@ -12,6 +12,7 @@ import java.util.List;
 
 
 // 4 Create Repository - DAO implementation
+// 7 Add methods from EmployeeDAO
 @Repository
 public class EmployeeDAOHibernateImpl implements EmployeeDAO {
 
@@ -25,7 +26,7 @@ public class EmployeeDAOHibernateImpl implements EmployeeDAO {
     }
 
     @Override
-    @Transactional
+    //@Transactional remove bc will create a service
     public List<Employee> findAll() {
 
         // get the current hibernate session
@@ -39,5 +40,46 @@ public class EmployeeDAOHibernateImpl implements EmployeeDAO {
 
         // return results
         return employees;
+    }
+
+    // Added from EmployeeDAO
+    @Override
+    public Employee findById(int theId) {
+
+        // get the current hibernate session
+        Session currentSession = entityManager.unwrap(Session.class);
+
+        // get the employee
+        Employee theEmployee = currentSession.get(Employee.class, theId);
+
+        // return the employee
+        return theEmployee;
+    }
+
+    @Override
+    public void save(Employee theEmployee) {
+
+        // get the current hibernate session
+        Session currentSession = entityManager.unwrap(Session.class);
+
+
+        //save employee
+            // saveOrUpdate - if id = 0 --> save, otherwise update
+        currentSession.saveOrUpdate(theEmployee);
+    }
+
+    @Override
+    public void deleteById(int theId) {
+
+        // get the current hibernate session
+        Session currentSession = entityManager.unwrap(Session.class);
+
+        // delete the employee
+        Query theQuery = currentSession.createQuery(
+                "DELETE from Employee WHERE id=:employeeId");
+
+        theQuery.setParameter("employeeId", theId);
+
+        theQuery.executeUpdate();
     }
 }
