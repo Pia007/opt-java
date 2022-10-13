@@ -11,7 +11,7 @@ import javax.transaction.Transactional;
 import java.util.List;
 
 
-// 3 Create Repository
+// 4 Create Repository - DAO implementation
 @Repository
 public class EmployeeDAOHibernateImpl implements EmployeeDAO {
 
