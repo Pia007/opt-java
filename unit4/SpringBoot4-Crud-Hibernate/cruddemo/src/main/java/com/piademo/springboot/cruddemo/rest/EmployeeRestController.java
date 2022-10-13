@@ -11,6 +11,7 @@ import java.util.List;
 // 5 Rest Controller
 // 10 refactor to use the service
 // 11 Get by id and add
+// 12 Update and delete
 @RestController
 @RequestMapping("/api")
 public class EmployeeRestController {
@@ -57,4 +58,27 @@ public class EmployeeRestController {
         return theEmployee;
     }
 
+    // update
+    @PutMapping("/employees")
+    public Employee updateEmployee(@RequestBody Employee theEmployee) {
+
+        employeeService.save(theEmployee);
+
+        return theEmployee;
+    }
+
+    // delete
+    @DeleteMapping("/employees/{employeeId}")
+    public String deleteEmployee(@PathVariable int employeeId) {
+
+        Employee tempEmployee = employeeService.findById(employeeId);
+
+        if (tempEmployee == null) {
+            throw new RuntimeException("Employee id not found: " + employeeId);
+        }
+
+        employeeService.deleteById(employeeId);
+
+        return "Deleted Employee id: " + employeeId;
+    }
 }
