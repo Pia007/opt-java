@@ -1,25 +1,24 @@
-package com.piademo.springboot.cruddemo.entities;
+package com.piademo.springboot.cruddemo.entity;
 
-import javax.annotation.processing.Generated;
 import javax.persistence.*;
 
 @Entity
-@Table(name="employees")
-
+@Table(name="employees") //map to table
 public class Employee {
 
     // fields
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id")
     private Long id;
 
-    @Column
+    @Column(name="first_name")
     private String firstName;
 
-    @Column
+    @Column(name="last_name")
     private String lastName;
 
-    @Column
+    @Column(name="email")
     private String email;
 
     // constructors
@@ -27,16 +26,14 @@ public class Employee {
     public Employee() {
     }
 
-    public Employee(Long id, String firstName, String lastName, String email) {
-        this.id = id;
+    // all but id - its auto generated
+    public Employee(String firstName, String lastName, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
     }
 
     // getter and setters
-
-
     public Long getId() {
         return id;
     }
@@ -67,5 +64,17 @@ public class Employee {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    // toString()
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                '}';
     }
 }

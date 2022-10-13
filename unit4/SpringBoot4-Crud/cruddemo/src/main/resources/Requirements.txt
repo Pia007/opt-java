@@ -22,3 +22,15 @@ Process:
 
 Architecture
 Employee REST CONTROLLER <---> Employee Service <---> Employee DAO(Hibernate) <---> DB
+
+
+*******************************************
+
+JPA - Java Persistence API(JPA)
+ -- standard API for ORM
+ -- only requires an implementation for use
+  -- defines a set of interfaces
+  -- requires an implementation to be usable
+ -- Vendor Implementations - can change vendors without affecting app
+  -- Hibernate...etc
+    -- default implementation of JPA
