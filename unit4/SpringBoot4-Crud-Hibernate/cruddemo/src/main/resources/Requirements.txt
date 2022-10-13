@@ -1,0 +1,36 @@
+SPRING BOOT REST API - REAL TIME PROJECT
+
+RESTApi <---> database
+
+Requirements:
+1. Create a REST API for Employee Directory
+2. Client
+    a: GET List of Employees
+    b: GET a single Employee by id
+    c: POST - Add Employee
+    d: PUT -Update Employee
+    e: DELETE an Employee
+
+Process:
+1. Set up Dev Environment
+2. Create a Spring Boot project using Spring Initializer
+3. Get a list of employees
+4. Get a single employee
+5. Add a new employee
+6. Update an existing employee
+7. Delete an employee
+
+Architecture
+Employee REST CONTROLLER <---> Employee Service <---> Employee DAO(Hibernate) <---> DB
+
+
+*******************************************
+
+JPA - Java Persistence API(JPA)
+ -- standard API for ORM
+ -- only requires an implementation for use
+  -- defines a set of interfaces
+  -- requires an implementation to be usable
+ -- Vendor Implementations - can change vendors without affecting app
+  -- Hibernate...etc
+    -- default implementation of JPA
