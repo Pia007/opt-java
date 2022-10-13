@@ -1,5 +1,7 @@
 SPRING BOOT REST API - REAL TIME PROJECT
 
+Using Entity Manager but leverage native Hibernate API
+
 RESTApi <---> database
 
 Requirements:
