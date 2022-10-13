@@ -1,0 +1,72 @@
+SPRING BOOT - REAL TIME PROJECT
+
+Spring Data REST
+    -- want to create a REST API for another entity - book, customer ..etc
+        -- Repeat same code?
+    -- Can tell Spring Data JPA
+        -- create REST API by using exiting JpaRepository (dev supplies entity type and primary key)
+        -- plug in entity type and primary key
+        -- create all of the basic CRUD features
+    -- can be used with Spring or Spring Boot
+    -- leverages existing JpaRepository
+        -- extending & adding custom queries with JPQL
+        -- Query DSL Domain Specific Language
+        -- define custom methods
+    -- minimizes boiler-plate code
+    -- no extra coding required
+
+    How does Spring Data REST work?
+    -- lets you scan your project for JpaRepository
+    -- Expose REST APIs for each entity type for your JpaRepository
+      ex) public interface EmployeeRepository extends JpaRepository<Employee, Integer> {}
+      -- will expose all of the employees endpoints
+    -- by default, will create endpoints based on entity type
+        -- How?
+            -- Simple pluralized form
+                -- takes the first character of the entity type as lowercase
+                -- adds an "s" to the entity
+                    ex) public interface EmployeeRepository extends JpaRepository<Employee, Integer> {}
+                    -- creates "/employees"  endpoint
+
+    Spring Data RESt endpoints
+        - HATEOAS compliant: Hypermedia as the Engine of Application State
+            -- Hypermedia-driven sites provide info to access REST interfaces
+                -- meta-data for REST data
+                  ex) REST response from GET/employees/3
+                    -- return JSON data
+                        - the top will have the employee data
+                        -- the bottom will have response meta-data or links to that actual entry or data
+                  ex) REST response from GET/employees
+                    -- return JSON array of all employees objects at the top
+                    -- meta-data includes page size, total elements, pages etc at the bottom
+            -- also used HAL to format the JSON data that's being returned
+                -- Hypertext Application Language data format
+
+
+Requirements:
+1. Create a REST API for Employee Directory
+2. Client
+    a: GET List of Employees
+    b: GET a single Employee by id
+    c: POST - Add Employee
+    d: PUT -Update Employee
+    e: DELETE an Employee
+
+Process:
+1. Add Spring Data REST to pom.xml  - THAT'S IT!
+2. Delete existing Controller and Service pkgs - if any
+3. Run and Test - localhost:8080 and localhost:8080/employees
+
+ReCAP:
+Only need
+-- entity: Employee
+-- JpaRepository: EmployeeRepository extends JpaRepository
+-- Maven POM dependency: spring-boot-starter-data-rest
+
+Application Architecture
+Spring Data REST( provides employee endpoints)  <---> Employee Repository <---> Database
+
+
+
+
+
