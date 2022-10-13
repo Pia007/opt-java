@@ -1,0 +1,56 @@
+SPRING BOOT REST API - REAL TIME PROJECT
+
+Spring Data JPA
+    -- want to create another DAO for another entity - book, customer ..etc
+        -- Repeat same code?
+    -- creating a DAO
+        -- the pattern is the same
+            -- change the entity type and primary key
+    -- Can tell Spring Data JPA
+        -- create DAO (dev supplies entity type and primary key)
+        -- plug in entity type and primary key
+        -- create all of the basic CRUD features
+    -- minimizes boiler-plate DAO code
+    -- advance features
+        -- extending & adding custom queries with JPQL
+        -- Query DSL Domain Specific Language
+        -- define custom methods
+
+    How?
+    JpaRepository - interface
+        -- exposes methods - CRUD methods etc
+
+
+RESTApi <---> database
+
+Requirements:
+1. Create a REST API for Employee Directory
+2. Client
+    a: GET List of Employees
+    b: GET a single Employee by id
+    c: POST - Add Employee
+    d: PUT -Update Employee
+    e: DELETE an Employee
+
+Process:
+1. Extend the JpaRepository interface
+    -- define a repository interface that extends the JpaRepository<Entity type, primary key>
+        -- public interface EmployeeRepository extends JpaRepositoryEmployee, Integer>
+2. Use the Repository in the app
+    -- set up the Service
+    -- add the repository as a field
+    -- set up constructor injection using @Autowired
+    -- service imple implements the service
+    -- then the service will make use of the repository
+    -- the repository uses Spring Data JPA to utilize DAO functionality
+
+
+Methods - DAO layer using standard SPRING DATA JPA
+    the methods will be called on the repository
+1. Get all employees
+2. Get a single employee
+3. Add a new employee
+4. Update an existing employee
+5. Delete an employee
+
+
