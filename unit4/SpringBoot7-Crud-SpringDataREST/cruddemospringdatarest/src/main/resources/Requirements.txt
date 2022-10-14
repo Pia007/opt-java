@@ -57,6 +57,16 @@ Process:
 2. Delete existing Controller and Service pkgs - if any
 3. Run and Test - localhost:8080 and localhost:8080/employees
 
+Extras:
+1. Customize endpoint base path - application.properties
+    * spring.data.rest.base-path=/magic-api
+    localhost:8080/magic-api and localhost:8080/magic-api/employees
+2. Using the new base path
+    a: Add a new employee
+    b: Update an employee - Spring Data REST only uses the id in the URL
+        - don't add the id to the body of the request
+            ex) localhost:8080/magic-api/employees/3
+    c: Delete an employee
 ReCAP:
 Only need
 -- entity: Employee
