@@ -76,6 +76,36 @@ Only need
 Application Architecture
 Spring Data REST( provides employee endpoints)  <---> Employee Repository <---> Database
 
+**********************************************************************
+
+SPRING DATE REST CONFIGURATION, PAGINATION AND SORTING
+
+English language is too complex for Spring Data REST
+    -- mainly complex pluralized forms
+    -- must manually specify the plural name
+What if wanted to expose a different resource name?
+    -- /members instead of /employees
+    -- specify plural name/path with an annotation
+       @RepositoryRestResource(path="members") ---> http://localhost:8080/members
+Pagination - page size
+    --returns 1sr 20 elements by default
+    -- can navigate to different pages using query params - pages numbers are 0 based or indexed
+        http://localhost:8080/members?page=0   will nav to the second page
+Configuration - application.properties, examples
+    spring.data.rest.base-path
+    spring.data.rest.default-page-size
+    spring.data.rest.max-page-size
+Sorting - can sort by the property names of an entity, ascending is default
+    -- Employee entity has firstName, lastName, email
+    -- http://localhost:8080/employees?sort=lastName   - ascending
+    -- http://localhost:8080/employees?sort=firstName,desc
+    -- http://localhost:8080/employees?sort=lastName,firstName,asc   - ln, then fn ascending
+
+Process:
+1. Change the Rest resource path in the repository
+    @RepositoryRestResource(path="members") and test and then comment it out
+2. Change the default page size to 3, test and change to 20
+3. Sort by lastname - asc and desc
 
 
 
