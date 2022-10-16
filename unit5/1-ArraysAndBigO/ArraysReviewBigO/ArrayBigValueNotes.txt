@@ -1,0 +1,14 @@
+Retrieving an elemement from an array
+1. Multiply the size of the element by its index
+2. Ge the start address of the array
+3. Add the start address to the result of the multiplication
+
+
+For an int array, assume elements start at address 12. Each byte is 4 bytes
+intArray[0] = 12 + 0 * 4 = 12
+intArray[1] = 12 + 1 * 4 = 16
+intArray[2] = 12 + 2 * 4 = 20
+intArray[3] = 12 + 3 * 4 = 24
+
+Regardless of the number of elements in the array it will take 2 steps to retrieve the element
+Thus O(1) constant time complexity - bc the number of steps is constant as the number of element increases the algo does not degrade
