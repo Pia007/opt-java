@@ -1,0 +1,53 @@
+Introduction
+Data Structures?
+    - organizes and stores data
+    - data structures differ by the way that they organize and store data
+    - Best? Considerations:
+	-- data to be stored
+	-- how application will access that data
+	-- operations the application will perform the most
+
+Algorithms?
+    -- describes the steps you have to perform
+    -- can be many algos that accomplish the same task
+    -- is not an implementation - the code you write to perform the steps of an algo
+    -- can have many implementaitions of the same algo
+
+Arrays and Big-O Notation
+
+1. Big-O Notation
+   a: Complexity - 2 types
+     i. time complexity - the number of steps that it takes to execute an algo
+	-- upper bound - worst case
+        -- helps to compare the worst case of one algo vs that of another algo
+        -- how the algo performs(scales) as the number of items it has to deal with grows
+	-- Big-O - expresses the complexity related to the number of items
+    ii. memory complexity - amt of memory it takes to run and algo
+	    -- not a big issue bc memory is cheap
+   b: Understanding Big-O
+     	Scenario: Add Sugar to Tea - What's the Big-O value
+	   1. Get the bowl containing the sugar
+	   2. Get a spoon
+           3. Scoop out sugar from using the spoon
+	   4. Pour the sugar from the spoon into the tea
+           5. Repeat steps 3 and 4 until the desired amt of sugar is added
+        -- n - number of items( desired sugars)
+        -- number of steps: 2n + 2
+	  --- 2n: steps 3 and 4 must be repeated until the desired amount of sugar is added
+          --- 2: steps 1 and 2
+          --- two in 2n and two as in the plus 2, remain constant. Thus, are not considered when determining Big-O value
+		Why? n influences the number of steps
+	  --- the time complexity is O of n, O(n)
+          --- the time complevity increases linearly
+      Values: Best to Worst
+	O(1) --> Constant
+	O(logn) --> Logarithmic, log to base 2
+	O(n) --> Linear
+	O(nlogn) --> n times log to base 2, aka n log-star n
+	O(n^2) --> Quadratic
+2. Arrays
+    -- zero indexed
+    -- must declare size (immutable)
+    -- one contiguous block of memory
+
+
