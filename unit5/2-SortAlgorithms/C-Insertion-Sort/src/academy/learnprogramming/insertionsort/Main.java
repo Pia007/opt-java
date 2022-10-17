@@ -19,7 +19,8 @@ public class Main {
                 inner loop
                     assign the first unsorted index to i
                     as long as i > 0 and the value at the array index i - 1 > than the newElement
-                        set the value at array index 1 to the value at array index i - 1
+                    decr i by 1
+                        shift to the right - set the value at array index 1 to the value at array index i - 1
              assign array index i to the value of the new element
 
         */
