@@ -18,6 +18,7 @@ public class Main {
     // Factorial with recursion
     public static int recursiveFactorial(int num) {
 
+        // need to account for 0 otherwise stack over flow exception
         if (num == 0) {
             return 1;
         }
