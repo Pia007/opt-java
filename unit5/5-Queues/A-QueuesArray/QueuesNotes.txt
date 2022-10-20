@@ -1,0 +1,8 @@
+QUEUES
+    - abstract data type
+    - dictate behavior, data access, operations
+    - FIFO
+    - add, aka enqueue, adds item to the end of the queue
+    - remove, ake dequeue - remove the item at the front from the queue
+    - peek - get item at the front of the queue, but does not remove it
+    - Arrays and Linked Lists
