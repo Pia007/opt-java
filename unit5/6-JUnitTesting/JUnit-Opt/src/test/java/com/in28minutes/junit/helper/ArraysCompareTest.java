@@ -25,7 +25,7 @@ class ArraysCompareTest {
 
     }
 
-    @Test
+    @Test(expected=NullPointerException.class)   // does not work in JUnit5
      void testArraySort_NullArray() {
         int[] numbers = {};
 //        int[] numbers = null;
@@ -44,4 +44,18 @@ class ArraysCompareTest {
         // empty array {} will not throw an expection, thus failed
     }
 
+    @Test(timeout = 1000)   //does not work in JUnit 5
+    public void testSort_Performance() {
+        int array[] = {12, 23, 4};
+        for(int i=1; i <= 1000000; i++) {
+            array[0] = i;
+            Arrays.sort(array);
+        }
+    }
+
 }
+
+/*
+
+JUnit 5 does no use expected and timeout https://www.arhohuttunen.com/junit-5-migration/#assertions
+* */
