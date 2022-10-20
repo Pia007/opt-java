@@ -1,0 +1,5 @@
+Vector class
+    - thread safe ArrayList that preceded the ArrayList
+    - is synchronized, thus can use it from different threads without having to synchronize the code
+    - only use when synchronization is required
+    - backed by an array
