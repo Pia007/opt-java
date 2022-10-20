@@ -1,0 +1,19 @@
+LISTS
+    - abstract data type, usually there is an Interface
+        - not a concrete data structure
+        - dictates the operations that will be performed, behavior
+        - concrete data structure is usually a concrete class
+        - abstract data type is usually an interface
+    - implement the List<E> interface
+    - classes that implement a list represent an ordered collection also known as a sequence
+        -- data organized sequentially just as in an array
+
+
+1. Array Lists
+    - good for storing a collection of objects that you want to iterate over sequentially
+    - resizable array implementation of the List interface
+        - the data in the list is stored in an array, aka backing array(actually stores the items)
+    - ArrayList() - constructs and empty array with initial capacity 10
+    - ArrayList(int initialCapacity) - empty list with the specified capacity
+    - ArrayList(Collection<? extends E> c) list containing the elements of the specified collection,
+        in the order they are returned by the collection's iterator
