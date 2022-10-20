@@ -1,0 +1,25 @@
+LINKED LIST
+    - sequential list of objects
+    - no arrays
+    - each item in the list is aware o f another item in the list
+        - each item contains a link to the next item in the list
+    - in an array each item is unaware of the other
+    - each item is called a node
+        - node has 2 parts
+            - field for the data
+            - next field of type node
+    - the first item is the head of the list
+        - if you have a reference to the head, can traverse the entire list until null
+        - only have to store a ref to the head
+    - Java has a linked list class
+
+    How to insert an item?
+        - Create a new node
+        - assign the head to the next field ref
+        - assign the new node to the head
+        - will be O(1) time complexity
+    Delete?
+        - assign the node to be removed to a temp variable
+        - assign the next ref of the head to te head
+        - return the temp variable
+        -O(1)
