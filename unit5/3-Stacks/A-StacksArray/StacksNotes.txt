@@ -1,0 +1,16 @@
+STACKS
+    - abstract data type
+    - dictate operations, behavior
+    - LIFO. thus no random access
+    - push - adds an item as the top item on the stack
+    - pop - removes the tio item on the stack
+    - peek - gets the top item on the stack without popping it
+    - can be backed by any data structure
+        - ideal backing data structure: linked list ( add and remove from front of list)
+Time Complexity
+    - depends on what data structure is being used to back the stack
+        - linked list
+            -- push, pop and peek will be constant time O(1)
+        - array
+            -- O(n) because the array will need to be resized
+            -- ideal when max num of items is known or when memory is tight
