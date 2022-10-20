@@ -1,12 +1,21 @@
 package com.in28minutes.junit.helper;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class StringHelperTest {
 
-    StringHelper helper = new StringHelper();
+    StringHelper helper;
+
+    @BeforeEach
+    void before() {
+        // create a new instance of StringHelper so that each test will have a new instance
+        helper = new StringHelper();
+//        System.out.println("helper created");
+
+    }
 
     @Test
     void truncateAInFirst2Positions_AinFirst2Positions() {
