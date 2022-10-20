@@ -33,19 +33,34 @@ class StringHelperTest {
         assertEquals("CDAA", helper.truncateAInFirst2Positions("CDAA"));
     }
 
+    /* areFirstAndLastTwoCharactersTheSame ABCD => false, ABAB => true, AB => true, A => false*/
     @Test
-    void areFirstAndLastTwoCharactersTheSame() {
+    void areFirstAndLastTwoCharactersTheSame_BasicNegativeScenario() {
+        //assertEquals(false, helper.areFirstAndLastTwoCharactersTheSame(("ABCD")));
+        assertFalse(helper.areFirstAndLastTwoCharactersTheSame(("ABCD")));
     }
+
+    @Test
+    void areFirstAndLastTwoCharactersTheSame_BasicPositiveScenario() {
+        assertTrue(helper.areFirstAndLastTwoCharactersTheSame(("ABAB")));
+    }
+
+    @Test
+    void areFirstAndLastTwoCharactersTheSame_AnotherNegativeScenario() {
+        assertFalse(helper.areFirstAndLastTwoCharactersTheSame(("A")));
+    }
+
 }
 
 /*
 
-using assert methods to check expected results
+Using assert methods to check expected results
 
 assertEquals(expected, actual)
     - actual is the result of whatever operation
 
-test StringHelper() - create an instance of it
+Test StringHelper methods - create an instance of it
+1. Test truncateAInFirst2Positions()
     then test the truncate in 1st position method
     before refactoring:
         String actual = helper.truncateAInFirst2Positions("AACD");
@@ -57,6 +72,13 @@ ACD => CD
 CDEF => CDEF - no A
 CDAA => CDAA - "A" is not in the 1st position, so it should not be truncated
 
-Tips:
+2. Test areFirstAndLastTwoCharactersTheSame()
+    before refactoring:
+        boolean actual = helper.areFirstAndLastTwoCharactersTheSame(("ABCD"));
+        boolean expected = false;
+        assertEquals(expected, actual);
+
+
+ABCD => false, ABAB => true, AB => true, A => false
 
  */
